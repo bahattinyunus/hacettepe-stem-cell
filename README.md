@@ -156,6 +156,12 @@ Burada:
 Kramers kaçış teorisine göre hücrenin somatik kuyudan pluripotent kuyuya tünelleme/atlama geçiş hızı:
 $$k_{\text{reprog}} \propto \exp\left(-\frac{\Delta V - \alpha \cdot [\text{OSKM}]}{k_B T_{\text{bio}}}\right)$$
 
+<p align="center">
+  <img src="assets/01_waddington_epigenetic_landscape.png" alt="Conrad Waddington Epigenetik Manzarası ve Reprogramlama" width="92%"/>
+  <br/>
+  <em><b>Şekil 1:</b> Conrad Waddington Epigenetik Manzarası 3D Potansiyel Enerji Yüzeyi V(x, y) ve Yamanaka Kokteyli (OSKM) ile Somatik Hücreden iPSC Vadisine Stokastik Reprogramlama Yörüngesi.</em>
+</p>
+
 ---
 
 ## 🧬 Modül 2: Hücre Kimliği, Epigenetik ve Yamanaka Reprogramlama
@@ -185,6 +191,12 @@ flowchart LR
     C -->|Dalga 3: Endojen Pluripotensi| D["Tam İndüklenmiş iPSC<br/>(Endojen OCT4+, NANOG+, Teratom Yetisi)"]
 ```
 
+<p align="center">
+  <img src="assets/02_scrna_umap_stem_cell_atlas.png" alt="scRNA-seq Kök Hücre Atlası ve Belirteç Genler" width="96%"/>
+  <br/>
+  <em><b>Şekil 2:</b> Tek Hücre (scRNA-seq) Transkriptom Atlası: 7 Temel Hücre Fenotipi Kümesi ile Karakteristik Belirteç Genlerin (POU5F1, NANOG, THY1, NPHS1) Ekspresyon Dağılım Gradyanı.</em>
+</p>
+
 ---
 
 ## 🔬 Modül 3: Rejeneratif Kaos, Kök Hücre Mikroçevresi ve Parakrin Yanıt
@@ -213,6 +225,12 @@ graph TD
     Podosit --> Sonuc["Filtrasyon Bariyeri Onarımı & Proteinüri Gerilemesi"]
 ```
 
+<p align="center">
+  <img src="assets/03_msc_secretome_podocyte_rescue.png" alt="Mezenkimal Kök Hücre Parakrin Sekretomu ve Podosit Kurtarma" width="96%"/>
+  <br/>
+  <em><b>Şekil 3:</b> Kemik İliği Mezenkimal Kök Hücre (BM-MSC) Sekretomu ve Saflaştırılmış Eksozomların Hasarlı Böbrek Glomerül Podositlerinde 28 Günlük Hasar Geriletme, Nefrin Restorasyonu ve Proteinüri Azaltma Kinetiği.</em>
+</p>
+
 ---
 
 ## 🦠 Modül 4: Kanser Kök Hücreleri (CSC), THY1/CD90 ve Biyomimetik Stratejiler
@@ -240,6 +258,12 @@ Araş. Gör. Dr. Kemal Kayaşlı'nın araştırması doğrultusunda:
 Araş. Gör. Dr. Özlem Altundağ Erdoğan'ın aktardığı stratejide:
 * **Hücre Zarı Kaplama (Cell Membrane Coating):** Kök hücre zarlarıyla kaplanan PLGA nanotaşıyıcılar retiküloendotelyal sistemden (RES) kaçar.
 * **Akıllı Salım:** Tümör nişindeki düşük pH (~6.5) veya matriks metalloproteinaz (MMP-2/9) varlığında yükünü bırakarak doğrudan CSC'leri hedef alır.
+
+<p align="center">
+  <img src="assets/04_cancer_stem_cell_thy1_targeting.png" alt="Kolorektal Kanser Kök Hücreleri, THY1/CD90 ve Biyomimetik Nanoterapi" width="96%"/>
+  <br/>
+  <em><b>Şekil 4:</b> Kolorektal Kanserde THY1/CD90 Kök Hücre Belirtecinin 5-FU Kemorezistansı ile Korelasyonu ve Hücre Zarıyla Kaplanmış Biyomimetik Nanotaşıyıcılarla Nüks Riskinin Önlenmesi.</em>
+</p>
 
 ---
 
