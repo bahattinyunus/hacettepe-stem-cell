@@ -1,0 +1,8 @@
+ligand,ligand_source,receptor,target_cell,pathway,action,weight,organ
+VEGFA,Kemik Iligi MSC,KDR (VEGFR2),Hasarli Podosit / Endotel,Anjiyogenez & Endotelyal Koruma,Podosit ayaksı çıkıntılarının (foot processes) stabilizasyonu,0.95,Böbrek Glomerülü
+HGF,Kemik Iligi MSC,MET (c-Met),Hasarli Podosit,Anti-Apoptoz & Doku Rejenerasyonu,Kaspaz-3 inhibisyonu ve hücre sağkalımı,0.9,Böbrek Glomerülü
+IGF1,Kemik Iligi MSC,IGF1R,Podosit,PI3K/Akt Pro-Survival,NPHS1 (Nefrin) ekspresyonunun restorasyonu,0.85,Böbrek Glomerülü
+IL10,Kemik Iligi MSC / Eksozom,IL10RA,Makrofaj / T Hücresi,İmmünomodülasyon,M1 pro-inflamatuvar makrofajların M2 iyileştirici fenotipe dönüşümü,0.88,İnflamatuvar Mikroçevre
+TNFAIP6 (TSG-6),Kemik Iligi MSC,CD44,İnflamatuvar İnfiltratlar,Anti-Enflamasyon,NF-kB yolağının baskılanması ve sitokin fırtınasının durdurulması,0.92,Kemik İliği / Akciğer / Böbrek
+FGF2 (bFGF),Kemik Iligi MSC,FGFR1,Fibroblast / Alveoler Hücre,Fibrozis Modülasyonu,Pulmoner fibroziste aşırı kollajen birikiminin sınırlandırılması,0.82,Akciğer Stroma
+ANGPT1 (Angiopoietin-1),Kemik Iligi MSC,TEK (Tie2),Glomerüler Endotel,Vasküler Permeabilite Bariyeri,Proteinürinin önlenmesi ve filtrasyon bariyer bütünlüğü,0.86,Böbrek Glomerülü
