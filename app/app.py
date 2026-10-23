@@ -166,6 +166,40 @@ def main():
 
         st.info("Sol menüden dilediğiniz analiz modülünü seçerek etkileşimli deneyleri başlatabilirsiniz.")
 
+        st.divider()
+        st.markdown("### 🔮 AI Çağında Kök Hücre ve Rejeneratif Tıp: 2030 ve Ötesi Vizyonu")
+        v_col1, v_col2, v_col3 = st.columns(3)
+        with v_col1:
+            st.markdown(
+                """
+                **1. Hücrenin 'Dijital İkizi'**  
+                scGPT, Geneformer ve AlphaFold 3 entegrasyonu ile hastaya özel hücrelerin in silico modellenmesi ve reprogramlama yörüngelerinin saniyeler içinde simülasyonu.
+                
+                **2. De Novo Organogenez & 4D Biyobaskı**  
+                Üretken yapay zeka ile kılcal damar ağları optimize edilmiş canlı biyoböbrek ve karaciğer dokusu üretimi.
+                """
+            )
+        with v_col2:
+            st.markdown(
+                """
+                **3. Otonom Islak Laboratuvarlar (Self-Driving Labs)**  
+                AI ajanlarının hipotez kurup robotik pipetleme ve scRNA-seq döngüleriyle kapalı döngüde (closed-loop) protokolleri optimize etmesi.
+
+                **4. Kanser Kök Hücrelerinde Diferansiasyon Terapisi**  
+                CSC'leri toksik kemoterapiyle bombalamak yerine, Waddington yüzeyinde epigenetik anahtarlarla zararsız somatik hücreye dönüştürme.
+                """
+            )
+        with v_col3:
+            st.markdown(
+                """
+                **5. In Vivo Epigenetik Rejuvenasyon**  
+                Yamanaka faktörlerinin (OSKM) geçici pulsatil ifadesiyle hücresel kimlik korunarak Horvath epigenetik saatinin 20-30 yıl gençleştirilmesi.
+
+                **6. Sentetik Embriyoloji & AI-Biyoetik**  
+                Blastoid ve gastruloid araştırmalarında uluslararası açık bilim (OPENRAM) standartları ve küresel sağlık eşitliği.
+                """
+            )
+
     # ---------------------------------------------------------
     # 2. WADDINGTON & EPİGENETİK REPROGRAMLAMA
     # ---------------------------------------------------------
