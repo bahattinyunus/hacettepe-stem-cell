@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/00_hacettepe_stem_cell_banner.png" alt="Hacettepe Kök Hücre ve Rejeneratif Tıp Platformu Banner" width="100%"/>
+</p>
+
 # 🧬 hacettepe-stem-cell: Kök Hücre, Epigenetik ve Rejeneratif Tıp Platformu
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
@@ -55,6 +59,12 @@ Aşağıdaki 6 eksen, bu alanın önümüzdeki 10-15 yıl içinde nereye evrilec
 * **AI Sonrası Vizyon:** Üretken yapay zeka (Generative AI) ve difüzyon algoritmaları, doğada var olmayan ancak vücutla mükemmel uyumlu **mikrovasküler ağları ve parankim mimarilerini** sıfırdan tasarlayacaktır.
 * **Uygulama:** Biyoyazıcılar (Bioprinters), hastanın kendi iPSC hücrelerinden türetilmiş endotel, podosit ve mezenkimal öncülleri AI tarafından optimize edilmiş koordinatlara mikron altı hassasiyetle yerleştirecek; nakil bekleyen diyaliz hastalarına canlı, fonksiyonel biyoböbrekler üretilecektir.
 
+<p align="center">
+  <img src="assets/05_ai_whole_cell_digital_twin.png" alt="AI-Güdümlü Bütüncül Hücresel Dijital İkiz" width="96%"/>
+  <br/>
+  <em><b>Vizyon Şekil 1:</b> AI-Güdümlü Bütüncül Hücresel Dijital İkiz (Whole-Cell Digital Twin) Mimarisi: Multi-omik girdi katmanından temel modeller (scGPT / ESM-3) ve in silico sanal hücre simülatörüne uzanan akış şeması.</em>
+</p>
+
 ### 3. Kendi Kendini Yöneten Otonom Islak Laboratuvarlar (Self-Driving Closed-Loop Wet-Labs)
 * **Mevcut Durum:** Araştırmacılar deney tasarlar, manuel pipetleme yapar ve verileri analiz eder.
 * **AI Sonrası Vizyon:** Çok modlu yapay zeka ajanları (Autonomous LLM/Agent Systems), robotik sıvı işleme (liquid handling) ve hücre kültürü inkübatörleriyle tam entegre çalışacaktır.
@@ -69,6 +79,12 @@ Aşağıdaki 6 eksen, bu alanın önümüzdeki 10-15 yıl içinde nereye evrilec
 * **Mevcut Durum:** Kök hücre tedavileri doku hasarı oluştuktan sonra devreye giren "tamir" protokolleridir.
 * **AI Sonrası Vizyon:** Yamanaka faktörlerinin (OSKM) in vivo geçici (pulsed / transient) aktivasyonu ile hücresel kimlik kaybolmadan (somatik hafıza korunarak) epigenetik saatin (Horvath Epigenetic Clock) 15-30 yıl geriye sarılması.
 * **Uygulama:** Tıp, sadece Alzheimer veya böbrek yetmezliğini tedavi eden bir reaktif sistem olmaktan çıkıp; dokuların biyolojik yaşlanmasını periyodik epigenetik formatlamayla durduran bir **"Ömür Mühendisliği" (Healthspan & Longevity Engineering)** platformuna dönüşecektir.
+
+<p align="center">
+  <img src="assets/06_closed_loop_self_driving_lab.png" alt="Otonom Kapalı Döngü Islak Laboratuvar ve Epigenetik Gençleşme" width="96%"/>
+  <br/>
+  <em><b>Vizyon Şekil 2:</b> Otonom Kapalı Döngü Islak Laboratuvar (Self-Driving Lab) Otomasyon Döngüsü ve In Vivo Pulsed OSKM Müdahalesi ile Horvath Epigenetik Saatinin (Kronolojik 75 Yaş ➔ Biyolojik 38 Yaş) Geri Çevrilmesi.</em>
+</p>
 
 ### 6. Biyoetik, Sentetik Embriyoloji ve Küresel Eşitlik (AI-Bioethics & Biosecurity)
 * **Vizyon Boyutu:** Blastoidler, sentetik embriyolar ve karmaşık organoidler geliştikçe ortaya çıkan bilinç ve etik sınırları, AI destekli biyoetik denetim ve uluslararası açık veri (Open Science / OPENRAM) protokolleri ile yönetilecektir.
