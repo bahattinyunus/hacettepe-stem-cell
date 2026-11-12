@@ -25,3 +25,19 @@ def test_cli_pathway_enrichment():
     res = subprocess.run(cmd, capture_output=True, text=True)
     assert res.returncode == 0
     assert "Pluripotensi" in res.stdout
+
+
+def test_cli_digital_twin():
+    cmd = [sys.executable, "-m", "src.cli", "digital-twin", "--target", "SETD2", "--type", "CRISPR_KO"]
+    res = subprocess.run(cmd, capture_output=True, text=True)
+    assert res.returncode == 0
+    assert "SETD2" in res.stdout
+    assert "Reprogramlama" in res.stdout
+
+
+def test_cli_nanomedicine():
+    cmd = [sys.executable, "-m", "src.cli", "nanomedicine", "--membrane", "STEM_CELL", "--drug", "5-FU"]
+    res = subprocess.run(cmd, capture_output=True, text=True)
+    assert res.returncode == 0
+    assert "Hedefleme" in res.stdout
+    assert "AUC" in res.stdout

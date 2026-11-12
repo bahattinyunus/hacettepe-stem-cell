@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hacettepe-stem-cell"
-version = "1.0.0"
-description = "Hacettepe Kök Hücre ve Rejeneratif Tıp Biyoinformatik ve Analiz Paketi"
+version = "1.2.0"
+description = "Computational Stem Cell Biology, Epigenetic Dynamics, and Regenerative Medicine Suite"
 readme = "README.md"
 authors = [
     { name = "Bahattin Yunus Çetin", email = "bahattinyunuscetin@hotmail.com" }
@@ -27,12 +27,20 @@ dependencies = [
 dev = [
     "pytest>=7.4.0",
     "pytest-cov>=4.1.0",
+    "black>=23.7.0",
+    "flake8>=6.1.0",
 ]
 
 [project.scripts]
-hacettepe-stem-cell = "app.app:main"
+hsc = "src.cli:main"
+hacettepe-stem-cell = "src.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/bahattinyunus/hacettepe-stem-cell"
+Documentation = "https://github.com/bahattinyunus/hacettepe-stem-cell/tree/main/docs"
+Repository = "https://github.com/bahattinyunus/hacettepe-stem-cell.git"
+Issues = "https://github.com/bahattinyunus/hacettepe-stem-cell/issues"
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
 testpaths = ["tests"]
-

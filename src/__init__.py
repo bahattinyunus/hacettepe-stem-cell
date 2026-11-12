@@ -14,6 +14,7 @@ from .secretome_network import SecretomeNetwork, PARACRINE_DATABASE
 from .epigenetic_clock import HorvathEpigeneticClock
 from .pathway_enrichment import PathwayEnrichment
 from .nanomedicine_simulator import BiomimeticNanomedicine
+from .digital_twin import WholeCellDigitalTwin, PerturbationResult
 
 __all__ = [
     "WaddingtonLandscape",
@@ -29,4 +30,6 @@ __all__ = [
     "HorvathEpigeneticClock",
     "PathwayEnrichment",
     "BiomimeticNanomedicine",
+    "WholeCellDigitalTwin",
+    "PerturbationResult",
 ]

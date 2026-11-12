@@ -23,6 +23,7 @@ from src.scrna_pipeline import (
 from src.stemness_index import calculate_stemness_index
 from src.biomarker_discovery import DifferentialExpression, BiomarkerClassifier
 from src.secretome_network import SecretomeNetwork, PARACRINE_DATABASE
+from src.digital_twin import WholeCellDigitalTwin
 
 # Sayfa yapılandırması
 st.set_page_config(
@@ -741,8 +742,9 @@ def main():
 
         st.divider()
 
-        tab_ai, tab_posters, tab_program, tab_participants = st.tabs([
+        tab_ai, tab_twin, tab_posters, tab_program, tab_participants = st.tabs([
             "🤖 AI Çağında Akademi Paneli & Anketler",
+            "🔮 In Silico Dijital İkiz & Pertürbasyon",
             "🖼️ Çalıştay Poster Bildirileri (8 Poster)",
             "⏱️ Çalıştay Programı ve Akış",
             "🏫 Katılımcı Üniversite ve Kurumlar",
@@ -863,6 +865,79 @@ def main():
                 * **Kurumsal Yönergeler:** iThenticate ve Turnitin AI dedektörleri kullanıldığından araştırmacılar çalışmalarında yapay zeka kullanımını şeffafça beyan etmelidir.
                 """
             )
+
+
+        with tab_twin:
+            st.markdown("### 🔮 In Silico Bütüncül Hücresel Dijital İkiz (Whole-Cell Digital Twin)")
+            st.markdown(
+                """
+                Çalıştayda sunulan deneysel ve moleküler mekanizmaları (SETD2 inaktivasyonu, GYY4137 H2S tedavisi,
+                Niklozamid Wnt/STAT3 blokajı, Etoposid genotoksik stresi, MEFV pyrin susturması ve podosit sekretom kurtarması)
+                in silico dinamik regülasyon ağı üzerinde simüle edin.
+                """
+            )
+
+            dt_c1, dt_c2, dt_c3 = st.columns([2, 1, 1])
+            with dt_c1:
+                target_choice = st.selectbox(
+                    "Moleküler / Farmakolojik Müdahale Seçin:",
+                    [
+                        "SETD2 (Epigenetik Bariyer Knockout - iPSC Reprogramlama)",
+                        "GYY4137 (Yavaş H2S Donörü - Pulmoner Fibrozis Kurtarma)",
+                        "Niclosamide (STAT3/Wnt Blokajı - CD133+ Kanser Kök Hücresi)",
+                        "Temsirolimus (mTOR İnhibitörü - Kemik Metastazı İnvazyonu)",
+                        "Etoposide (Genotoksik Stres - Adipojenik Kilit)",
+                        "MEFV (Pyrin Susturma - FMF Nötrofil Göçü)",
+                        "THY1 (CD90 Kanser İlişkili Fibroblast / Stroma Modülasyonu)",
+                        "Podocyte Rescue (İndüklenmiş BM-MSC Parakrin Sekretomu)",
+                    ],
+                )
+            with dt_c2:
+                intensity_val = st.slider("Müdahale Gücü (Doz / Etki):", 0.1, 1.0, 0.85, 0.05)
+            with dt_c3:
+                noise_val = st.slider("Biyolojik Gürültü (Noise):", 0.0, 0.2, 0.05, 0.01)
+
+            # Map selection to internal target
+            target_key = target_choice.split()[0]
+            pert_type = "CRISPR_KO" if ("Knockout" in target_choice or "Susturma" in target_choice) else (
+                "TROPHIC_RESCUE" if ("Kurtarma" in target_choice or "Sekretomu" in target_choice) else "INHIBITION"
+            )
+
+            twin = WholeCellDigitalTwin()
+            res = twin.simulate_perturbation(
+                target_gene_or_compound=target_key,
+                perturbation_type=pert_type,
+                intensity=intensity_val,
+                noise_level=noise_val,
+            )
+            res_df = twin.to_dataframe(res)
+
+            st.success(f"**Fenotipik Durum Dönüşümü:** {res.phenotypic_transition}")
+            st.info(f"**Biyobelirteç ve Mekanizma Bildirimi:** {res.biomarker_alert}")
+
+            r_col1, r_col2, r_col3, r_col4 = st.columns(4)
+            r_col1.metric("Tahmini Hücre Canlılığı", f"%{res.viability_percentage}", "BCL2 / BAX Dengesi")
+            r_col2.metric("Stemness Skoru Değişimi", f"{res.stemness_shift:+.3f}", "mRNAsI Endeksi")
+            r_col3.metric("Reprogramlama Çarpanı", f"{res.reprogramming_efficiency_multiplier}x", "iPSC Koloni Verimi")
+            sig_count = int(res_df['Significant'].sum())
+            r_col4.metric("Anlamlı Değişen Genler", f"{sig_count} Gen", "|Log2FC| >= 0.585")
+
+            st.markdown("#### 📊 Gen Ekspresyon Değişimleri (Log2 Fold Change)")
+            fig_fc = px.bar(
+                res_df,
+                x="Gene",
+                y="Log2FC",
+                color="Log2FC",
+                color_continuous_scale="RdBu_r",
+                text="Log2FC",
+                title="In Silico Pertürbasyon Sonrası Genomik Ağ Tepkisi",
+            )
+            fig_fc.update_traces(texttemplate="%{text:.2f}", textposition="outside")
+            fig_fc.update_layout(height=380, margin=dict(l=20, r=20, t=40, b=20))
+            st.plotly_chart(fig_fc, use_container_width=True)
+
+            with st.expander("📋 Detaylı İfade Tablosu ve Sayısal Parametreler"):
+                st.dataframe(res_df, use_container_width=True)
 
         with tab_posters:
             st.markdown("### 🖼️ Çalıştayda Sunulan Bilimsel Posterler (8 Bildiri)")

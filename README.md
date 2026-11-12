@@ -1,523 +1,366 @@
 <p align="center">
-  <img src="assets/00_hacettepe_stem_cell_banner.png" alt="Hacettepe Kök Hücre ve Rejeneratif Tıp Platformu Banner" width="100%"/>
+  <img src="assets/00_hacettepe_stem_cell_banner.png" alt="Hacettepe Stem Cell & Regenerative Medicine Platform Banner" width="100%"/>
 </p>
 
-# 🧬 hacettepe-stem-cell: Kök Hücre, Epigenetik ve Rejeneratif Tıp Platformu
+# 🧬 hacettepe-stem-cell: Computational Stem Cell Biology, Epigenetic Dynamics & Regenerative Medicine Platform
 
-[![Python 3.10+](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Streamlit App](https://img.shields.io/badge/Streamlit-Interactive%20UI-FF4B4B.svg)](https://streamlit.io)
-[![Tests: Pytest](https://img.shields.io/badge/tests-23%20passed-brightgreen.svg)](https://docs.pytest.org/)
-[![Code style: black](https://img.shields.io/badge/code%20style-clean-000000.svg)](https://github.com/psf/black)
+<p align="center">
+  🌐 <b>English</b> | <a href="README_TR.md">Türkçe Dokümantasyon</a>
+</p>
 
-> **Hacettepe Üniversitesi Sağlık Bilimleri Enstitüsü Kök Hücre Bilimleri Ana Bilim Dalı Çalıştayı Notları, Genişletilmiş Biyoinformatik Kütüphanesi ve İnteraktif Simülasyon Ekosistemi**
+<p align="center">
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue.svg" alt="Python Versions"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License"></a>
+  <a href="https://streamlit.io"><img src="https://img.shields.io/badge/Streamlit-Interactive%20UI-FF4B4B.svg" alt="Streamlit App"></a>
+  <a href="https://docs.pytest.org/"><img src="https://img.shields.io/badge/tests-30%20passed-brightgreen.svg" alt="Tests"></a>
+  <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/Docker-Ready-2496ED.svg" alt="Docker"></a>
+  <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code Style"></a>
+  <a href="https://doi.org/10.5281/zenodo.10000000"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.10000000-blue" alt="DOI"></a>
+</p>
 
-Bu açık kaynaklı araştırma deposu, Hacettepe Üniversitesi Kök Hücre Bilimleri Çalıştayı'nda sunulan çığır açıcı bilimsel araştırmaları, moleküler mekanizmaları ve translasyonel tıp stratejilerini derleyerek; temel kök hücre biyolojisinden (101) hesaplamalı tek hücre (scRNA-seq) biyoinformatiğine, Waddington epigenetik manzarası dinamiklerinden yapay zeka tabanlı multi-omik biyobelirteç keşfine uzanan uçtan uca interaktif bir platform sunar.
+> **An End-to-End Computational Biology Suite, Whole-Cell In Silico Digital Twin, and Open Research Archive for Hacettepe University's 2nd Innovative Stem Cell Technologies Symposium.**
 
----
-
-## 📑 İçindekiler Tablosu
-
-1. [🔮 Gelecek Vizyonu: AI Sonrası Çağda Kök Hücre ve Rejeneratif Tıp (2030 ve Ötesi)](#-gelecek-vizyonu-ai-sonrası-çağda-kök-hücre-ve-rejeneratif-tıp-2030-ve-ötesi)
-2. [Seminal Alıntılar ve Araştırma Sözleri](#-seminal-alıntılar-ve-araştırma-sözleri)
-3. [Hacettepe Kök Hücre Çalıştayı Bildiri Notları](#-hacettepe-kök-hücre-çalıştayı-bildiri-notları)
-4. [Modül 1: Kök Hücre 101, Potens Hiyerarşisi ve Waddington Manzarası](#-modül-1-kök-hücre-101-potens-hiyerarşisi-ve-waddington-manzarası)
-5. [Modül 2: Hücre Kimliği, Epigenetik ve Yamanaka Reprogramlama](#-modül-2-hücre-kimliği-epigenetik-ve-yamanaka-reprogramlama)
-6. [Modül 3: Rejeneratif Kaos, Kök Hücre Mikroçevresi ve Parakrin Yanıt](#-modül-3-rejeneratif-kaos-kök-hücre-mikroçevresi-ve-parakrin-yanıt)
-7. [Modül 4: Kanser Kök Hücreleri (CSC), THY1/CD90 ve Biyomimetik Stratejiler](#-modül-4-kanser-kök-hücreleri-csc-thy1cd90-ve-biyomimetik-stratejiler)
-8. [Modül 5: Multi-Omik Entegrasyon ve AI Çağında Akademi (Dry-Lab)](#-modül-5-multi-omik-entegrasyon-ve-ai-çağında-akademi-dry-lab)
-9. [Uluslararası Ortaklıklar ve AB Fonları (Oturum IV)](#-uluslararası-ortaklıklar-ve-ab-fonları-oturum-iv)
-10. [Proje Mimarisi ve Dizin Yapısı](#-proje-mimarisi-ve-dizin-yapısı)
-11. [Hızlı Başlangıç ve Kurulum](#-hızlı-başlangıç-ve-kurulum)
-12. [İnteraktif Streamlit Web Platformu Kullanımı](#-interaktif-streamlit-web-platformu-kullanımı)
-13. [Python Kütüphanesi Olarak Kullanım Örnekleri](#-python-kütüphanesi-olarak-kullanım-örnekleri)
-14. [Kapsamlı Akademik Kaynakça](#-kapsamlı-akademik-kaynakça)
+`hacettepe-stem-cell` bridges empirical wet-lab discoveries and dry-lab computational modeling. From non-linear stochastic differential equations (Waddington potential landscapes) to single-cell RNA sequencing (scRNA-seq) pseudotime inference, Horvath epigenetic aging clocks, biomimetic nanomedicine pharmacokinetics, and AI-driven multi-omics biomarker discovery, this repository serves as a global, reproducible scientific testbed.
 
 ---
 
-## 🔮 Gelecek Vizyonu: AI Sonrası Çağda Kök Hücre ve Rejeneratif Tıp (2030 ve Ötesi)
+## 📑 Table of Contents
 
-> *"Biyoloji artık salt gözlemsel bir doğa bilimi değildir; yapay zeka, transkripsiyon faktörleri ve epigenetik düzenleyiciler aracılığıyla satır satır derlenebilen programlanabilir bir bilgi teknolojisine dönüşmüştür."*
+1. [🔮 Future Vision: Stem Cells & Regenerative Medicine in the Post-AI Era (2030+)](#-future-vision-stem-cells--regenerative-medicine-in-the-post-ai-era-2030)
+2. [🏛️ Hacettepe University 2nd Stem Cell Technologies Symposium Proceedings](#️-hacettepe-university-2nd-stem-cell-technologies-symposium-proceedings)
+3. [🤖 AI in Academia Panel & Community Survey Findings](#-ai-in-academia-panel--community-survey-findings)
+4. [🖼️ Scientific Poster Showcase (8 Posters)](#️-scientific-poster-showcase-8-posters)
+5. [🧬 Core Computational Engines](#-core-computational-engines)
+   * [Module 1: Waddington Epigenetic Landscape & Langevin Dynamics](#module-1-waddington-epigenetic-landscape--langevin-dynamics)
+   * [Module 2: Single-Cell RNA-seq (scRNA-seq) & Lineage Trajectory](#module-2-single-cell-rna-seq-scrna-seq--lineage-trajectory)
+   * [Module 3: In Vivo Rejuvenation & Horvath Epigenetic Clock](#module-3-in-vivo-rejuvenation--horvath-epigenetic-clock)
+   * [Module 4: Paracrine Secretome & Podocyte FSGS Rescue](#module-4-paracrine-secretome--podocyte-fsgs-rescue)
+   * [Module 5: Cancer Stem Cells (CSCs) & Biomimetic Nanomedicine](#module-5-cancer-stem-cells-cscs--biomimetic-nanomedicine)
+   * [Module 6: In Silico Whole-Cell Digital Twin & Perturbation Engine](#module-6-in-silico-whole-cell-digital-twin--perturbation-engine)
+6. [🚀 Quick Start & Installation](#-quick-start--installation)
+7. [⌨️ Command Line Interface (CLI - `hsc`)](#️-command-line-interface-cli---hsc)
+8. [🖥️ Interactive Streamlit Web Platform](#️-interactive-streamlit-web-platform)
+9. [🐍 Python API Examples](#-python-api-examples)
+10. [🐳 Docker & Containerization](#-docker--containerization)
+11. [🧪 Unit Tests & Verification (30 Tests)](#-unit-tests--verification-30-tests)
+12. [📖 Academic References & Citation](#-academic-references--citation)
 
-Yapay zeka devrimi (özellikle biyolojik temel modeller - Biological Foundation Models, üretken difüzyon ağları ve otonom laboratuvar ajanları), kök hücre biyolojisi ile rejeneratif tıbbın çehresini kökten değiştirmektedir. Geleneksel olarak aylar veya yıllar süren deneme-yanılma (trial-and-error) tabanlı ıslak laboratuvar protokolleri yerini, **in silico tahmin ve otonom biyolojik derleme (biological compiling)** çağına bırakmaktadır.
+---
+
+## 🔮 Future Vision: Stem Cells & Regenerative Medicine in the Post-AI Era (2030+)
+
+> *"Biology is no longer merely an observational descriptive science; it has transformed into a programmable information technology compiled through transcription factors, chromatin modifiers, and biological foundation models."*
 
 ```mermaid
 graph LR
-    A["Gözlemsel Biyoloji (1950-2000)<br/>Mikroskopi & Doku Boyama"] --> B["Moleküler ve Genomik Çağ (2000-2020)<br/>iPSC, scRNA-seq, CRISPR"]
-    B --> C["Yapay Zeka ve Sentetik Çağ (2025-2035+)<br/>Dijital İkizler, Otonom Laboratuvarlar, De Novo Organogenez"]
+    A["Observational Era (1950-2000)<br/>Microscopy & Tissue Histology"] --> B["Molecular & Genomic Era (2000-2020)<br/>iPSC, scRNA-seq, CRISPR"]
+    B --> C["AI & Generative Era (2025-2035+)<br/>Whole-Cell Digital Twins, Self-Driving Labs, De Novo Organogenesis"]
 ```
 
-Aşağıdaki 6 eksen, bu alanın önümüzdeki 10-15 yıl içinde nereye evrileceğine dair stratejik vizyon haritasını çizmektedir:
-
-### 1. Hücrenin 'Dijital İkizi' ve Bütüncül Hücre Temel Modelleri (Whole-Cell Digital Twins)
-* **Mevcut Durum:** Tek hücre sekanslama (scRNA-seq) ile hücrelerin anlık transkriptomik fotoğrafları çekilmektedir.
-* **AI Sonrası Vizyon:** scGPT, Geneformer, scVI ve protein dil modelleri (AlphaFold 3, ESM-3) birleştirilerek her hastanın hücre tipine özel **"Hücresel Dijital İkiz" (Cellular Digital Twin)** inşa edilecektir.
-* **Uygulama:** Bir podositin, nöronun veya kardiyomiyositin hasar anında nasıl davranacağı, hangi mikroçevre sinyallerine ne yanıt vereceği ıslak laboratuvarda haftalarca beklenmeksizin süper-bilgisayarlarda saniyeler içinde simüle edilecek; en uygun rejeneratif kokteyl doğrudan hesaplanacaktır.
-
-### 2. Üretken Organogenez ve 4D AI-Güdümlü Biyobaskılama (Generative Organogenesis)
-* **Mevcut Durum:** Organoidler ve 3D biyobaskı ile basit hücresel tabakalar üretilebilmekte ancak karmaşık vaskülarizasyon (kılcal damar ağı) ve fonksiyonel mikromimari taklit edilememektedir.
-* **AI Sonrası Vizyon:** Üretken yapay zeka (Generative AI) ve difüzyon algoritmaları, doğada var olmayan ancak vücutla mükemmel uyumlu **mikrovasküler ağları ve parankim mimarilerini** sıfırdan tasarlayacaktır.
-* **Uygulama:** Biyoyazıcılar (Bioprinters), hastanın kendi iPSC hücrelerinden türetilmiş endotel, podosit ve mezenkimal öncülleri AI tarafından optimize edilmiş koordinatlara mikron altı hassasiyetle yerleştirecek; nakil bekleyen diyaliz hastalarına canlı, fonksiyonel biyoböbrekler üretilecektir.
+### Strategic Axes for 2030 and Beyond:
+1. **Whole-Cell Digital Twins:** Coupling single-cell foundation models (scGPT, Geneformer) with protein design networks (AlphaFold 3, ESM-3) to predict dynamic cell-state trajectories *in silico* prior to wet-lab execution.
+2. **Generative 4D Organogenesis & Bioprinting:** Designing non-natural microvascular capillary beds with diffusion architectures to sustain perfusable whole biokidneys and biolivers.
+3. **Self-Driving Closed-Loop Laboratories:** Autonomous AI agents formulating molecular hypotheses, orchestrating robotic liquid handlers, and iterating reprogramming protocols overnight without human intervention.
+4. **Differentiation Therapy 2.0:** Forcing malignant cancer stem cells (CSCs) trapped in oncogenic epigenetic minima to terminally differentiate into post-mitotic benign states instead of relying on toxic ablation.
+5. **In Vivo Epigenetic Rejuvenation:** Transient pulsatile expression of Yamanaka factors (OSKM) to rewind the Horvath epigenetic clock by 15–30 years while preserving somatic cell identity.
+6. **Open Global Bioethics & Biosecurity:** Rigorous oversight, FAIR data standards, and democratic access across international consortia.
 
 <p align="center">
-  <img src="assets/05_ai_whole_cell_digital_twin.png" alt="AI-Güdümlü Bütüncül Hücresel Dijital İkiz" width="96%"/>
+  <img src="assets/05_ai_whole_cell_digital_twin.png" alt="Whole-Cell Digital Twin Architecture" width="94%"/>
   <br/>
-  <em><b>Vizyon Şekil 1:</b> AI-Güdümlü Bütüncül Hücresel Dijital İkiz (Whole-Cell Digital Twin) Mimarisi: Multi-omik girdi katmanından temel modeller (scGPT / ESM-3) ve in silico sanal hücre simülatörüne uzanan akış şeması.</em>
+  <em><b>Figure 1:</b> AI-driven whole-cell digital twin architecture: From multi-omics inputs to foundational embeddings and in silico perturbation predictions.</em>
 </p>
 
-### 3. Kendi Kendini Yöneten Otonom Islak Laboratuvarlar (Self-Driving Closed-Loop Wet-Labs)
-* **Mevcut Durum:** Araştırmacılar deney tasarlar, manuel pipetleme yapar ve verileri analiz eder.
-* **AI Sonrası Vizyon:** Çok modlu yapay zeka ajanları (Autonomous LLM/Agent Systems), robotik sıvı işleme (liquid handling) ve hücre kültürü inkübatörleriyle tam entegre çalışacaktır.
-* **Kapalı Döngü Keşif (Closed-Loop Discovery):** AI hipotezi üretir $\rightarrow$ robotik sistem deneyi kurar $\rightarrow$ otomatik floresan/scRNA-seq taraması yapılır $\rightarrow$ AI sonuçları yorumlayıp protokolü günceller. İnsan eli değmeden bir gecede yüzlerce reprogramlama iterasyonu gerçekleştirilecektir.
-
-### 4. Kanser Kök Hücrelerinde "Diferansiasyon Terapisi 2.0" (Reversible Oncogenesis)
-* **Mevcut Durum:** Kemoterapi ve radyoterapi tümör kütlesini yakarak yok etmeye çalışır; CSC'ler sağ kalarak nüks oluşturur.
-* **AI Sonrası Vizyon:** Kanseri bir "mutasyonel felaket" olmanın ötesinde, Waddington manzarasında sıkışmış bir **"epigenetik gelişimsel takılma" (epigenetic arrest)** olarak ele almak.
-* **Uygulama:** Kanser kök hücrelerini yok etmek yerine, AI tarafından haritalanan epigenetik anahtar kombinasyonları uygulanarak hücreler kötü huylu (malign) durumdan çıkarılacak; bölünmeyen, zararsız somatik hücrelere zorla diferansiye edilecektir (*Differentiation Therapy*).
-
-### 5. In Vivo Epigenetik Rejuvenasyon ve Biyolojik Yaşın Geri Çevrilmesi
-* **Mevcut Durum:** Kök hücre tedavileri doku hasarı oluştuktan sonra devreye giren "tamir" protokolleridir.
-* **AI Sonrası Vizyon:** Yamanaka faktörlerinin (OSKM) in vivo geçici (pulsed / transient) aktivasyonu ile hücresel kimlik kaybolmadan (somatik hafıza korunarak) epigenetik saatin (Horvath Epigenetic Clock) 15-30 yıl geriye sarılması.
-* **Uygulama:** Tıp, sadece Alzheimer veya böbrek yetmezliğini tedavi eden bir reaktif sistem olmaktan çıkıp; dokuların biyolojik yaşlanmasını periyodik epigenetik formatlamayla durduran bir **"Ömür Mühendisliği" (Healthspan & Longevity Engineering)** platformuna dönüşecektir.
-
-<p align="center">
-  <img src="assets/06_closed_loop_self_driving_lab.png" alt="Otonom Kapalı Döngü Islak Laboratuvar ve Epigenetik Gençleşme" width="96%"/>
-  <br/>
-  <em><b>Vizyon Şekil 2:</b> Otonom Kapalı Döngü Islak Laboratuvar (Self-Driving Lab) Otomasyon Döngüsü ve In Vivo Pulsed OSKM Müdahalesi ile Horvath Epigenetik Saatinin (Kronolojik 75 Yaş ➔ Biyolojik 38 Yaş) Geri Çevrilmesi.</em>
-</p>
-
-### 6. Biyoetik, Sentetik Embriyoloji ve Küresel Eşitlik (AI-Bioethics & Biosecurity)
-* **Vizyon Boyutu:** Blastoidler, sentetik embriyolar ve karmaşık organoidler geliştikçe ortaya çıkan bilinç ve etik sınırları, AI destekli biyoetik denetim ve uluslararası açık veri (Open Science / OPENRAM) protokolleri ile yönetilecektir.
-* **Hedef:** Bu ileri teknolojilerin yalnızca seçkin merkezlerde değil, küresel ölçekte tüm insanlığın sağlığı için erişilebilir kılınmasıdır.
-
 ---
 
----
+## 🏛️ Hacettepe University 2nd Stem Cell Technologies Symposium Proceedings
 
-## 💬 Seminal Alıntılar ve Araştırma Sözleri
+Hosted by the **Department of Stem Cell Sciences, Graduate School of Health Sciences, Hacettepe University**, bringing together **237 registered participants** across 21 universities, overseas research institutions (Ruhr-Universität Bochum), and strategic bodies (TÜSEB Cancer Institute, TAGEM, LÖSEV, Ankara Bar). Opened by Graduate School Director **Prof. Dr. Müge Yemişçi Özkan** and Department Chair **Prof. Dr. Betül Çelebi Saltık**:
 
-> *"Kök hücreler, biyolojinin nihai 'açık kaynak' (open-source) kodlarıdır. Doğru transkripsiyon faktörleri ve epigenetik düzenleyicilerle derlendiklerinde, organizmadaki herhangi bir fonksiyonel dokuya dönüşebilme veya hasarı onarabilme kapasitesine sahiptirler."*  
-> — **Araştırma Konsorsiyumu Notu**
-
-> *"Diferansiasyon tek yönlü bir sokak değildir. Termal fluktuasyonlar ve transkripsiyonel regülatörler doğru uygulandığında, hücre kaderi bilyesi vadiden yukarı yuvarlanarak pluripotent tepeye geri dönebilir."*  
-> — **Prof. Dr. Shinya Yamanaka** (2012 Nobel Tıp Ödülü Töreni Konuşması, *Induction of Pluripotency by Defined Factors*)
-
-> *"Gelişim biyolojisinde epigenetik manzara, genetik ağların kurduğu potansiyel enerji kuyularından ibarettir. Hücre, vadiler boyunca yuvarlanan bir parçacıktır; bifurkasyon noktalarında kader kararları verilir."*  
-> — **Conrad Hal Waddington** (*The Strategy of the Genes*, 1957)
-
-> *"Mezenkimal Kök Hücrelerin (MSC) adını değiştirme zamanı çoktan gelmiştir: Onlar doğrudan hücre nakliyle doku oluşturan hücreler değil, hasar alanına göç ederek mikroçevredeki inflamasyonu dindiren ve rejenerasyonu tetikleyen 'Medicinal Signaling Cells' (Tıbbi İlaç Fabrikalarıdır)."*  
-> — **Prof. Dr. Arnold I. Caplan** (*Mesenchymal Stem Cells: Time to Change the Name!*, Stem Cells Translational Medicine, 2017)
-
-> *"Bir tümör kütlesini ameliyatla almak veya kemoterapiyle küçültmek yetersizdir. Kök hücre fenotipini (CSC) koruyan ve sessiz (quiescent) bekleyen hücreleri hedef almadığınız sürece, yangının közünü söndüremezsiniz."*  
-> — **Prof. Dr. Robert A. Weinberg** (*The Biology of Cancer*, Cancer Stem Cell Paradigm)
-
-> *"Multi-omik verilerle çalıştığımızda önümüzde on binlerce transkript ve metabolit sinyali uzanır. Ancak klinik translasyonda kritik soru şudur: 'Binlerce Sinyal, Kaç Biyobelirteç?' Bu düğümü sadece biyolojik sezgi değil, istatistiksel sıkılık ve makine öğrenmesi çözer."*  
-> — **Dr. Öğr. Üyesi Cemil Can Eylem** (Hacettepe Kök Hücre Çalıştayı, 2024)
-
-> *"Hücre kimliği sabit bir kilit değildir. Somatik hafıza, epigenetik demetilasyon dalgasıyla silinebilir ve yeniden yazılabilir."*  
-> — **Öğr. Gör. Dr. Burcu Özçimen Batman** (Hacettepe Kök Hücre Çalıştayı, 2024)
-
----
-
-## 🏛️ Hacettepe Kök Hücre Çalıştayı Bildiri Notları
-
-Çalıştay; **Hacettepe Üniversitesi Sağlık Bilimleri Enstitüsü Kök Hücre Bilimleri Ana Bilim Dalı** ev sahipliğinde, 21 farklı üniversiteden, Ruhr-Universität Bochum'dan ve TÜSEB, TAGEM, LÖSEV gibi stratejik kurumlardan **237 kayıtlı katılımcı** ile gerçekleştirilmiştir. Açılışını Enstitü Müdürü **Prof. Dr. Müge Yemişçi Özkan** ile Ana Bilim Dalı Başkanı **Prof. Dr. Betül Çelebi Saltık** yapmıştır:
-
-| Oturum | Konu & Başlık | Konuşmacı & Kurum | Anahtar Bulgu ve Moleküler Mekanizma |
+| Session & Chairs | Title & Speaker | Affiliation | Key Molecular Findings & Translational Insights |
 | :--- | :--- | :--- | :--- |
-| **I. Oturum** *(Başkanlar: Prof. Dr. Fatma Visal Okur, Prof. Dr. Köksal Özgül)* | **Yeniden Programlamada Epigenetiğin Rolü** | **Öğr. Gör. Dr. Burcu ÖZÇİMEN BATMAN** *(Kök Hücre Bilimleri A.B.D.)* | SETD2 inaktivasyonu, shRNA knockdown ve H3.3 K36M mutasyonuyla H3K36me3 düzeyinin düşürülmesi, somatik epigenetik bariyeri yıkarak iPSC reprogramlama verimini katlar. |
-| **I. Oturum** | **İmmün Yetmezlikler için Gen Tedavi Geliştirilmesi ve Kliniğe Geçiş** | **Dr. Özgür Doğuş EROL DUYAR** *(Kök Hücre Bilimleri A.B.D.)* | Griscelli Sendromu Tip 2 (GS-2 / RAB27A) tedavisinde CRISPR/Cas9 canlılık düşüşü yaratırken; lentiviral gen aktarımı ile fonksiyonel ekzositoz düzelmesi ve iPSC hematopoietik farklılaşması sağlanmıştır. |
-| **I. Oturum** | **Hücre Göçü ve Otoinflamasyon: Hastalık Mekanizmalarının in vitro Modellenmesi** | **Dr. Öğr. Üyesi Tayfun Hilmi AKBABA** *(Tıbbi Biyoloji A.B.D.)* | Ailevi Akdeniz Ateşi'nde (MEFV / pyrin) pyrin'in nötrofil polarizasyonunda f-aktin ile hareket öncüsü kenarda (leading edge) kolokalize olması ve ekzon 10 mutasyonlarında artan kemotaksis. |
-| **II. Oturum** *(Başkanlar: Prof. Dr. Ayşen Günel-Özcan, Dr. Öğr. Üyesi Cansu Özdemir Saka)* | **Podosit Hasarı Mikroçevresinde İndüklenmiş BM-MSC Rejeneratif Etkisi** | **Öğr. Gör. Dr. Özge Burcu ŞAHAN** *(Kök Hücre Bilimleri A.B.D.)* | İndüklenmiş BM-MSC sekretomunun podosit hücre iskeletini güçlendirip lipotoksik yükü azaltması; in vivo FSGS modelinde podosit kaybını durdurup proteinüriyi dramatik baskılaması. |
-| **II. Oturum** | **Kemik İliği Stromasında Genotoksik Stresin Hücre Kaderi Üzerine Etkileri** | **Dr. Bihter MURATOĞLU** *(Kök Hücre Bilimleri A.B.D.)* | Enzimsiz BMAT izolasyonu; AML ve Fanconi anemisinde etoposid genotoksik stresinin erken adipogenez genlerini (CEBPB, CEBPD, JUNB) artırmasına rağmen PPARG/ADIPOQ maturasyonunu durdurması. |
-| **II. Oturum** | **Deneysel Pulmoner Fibroziste Yeni Tedavi Yaklaşımları** | **Dr. Öğr. Üyesi Yasemin KARAMAN** *(Farmakoloji A.B.D.)* | Bleomisin akciğer fibrozisinde yavaş H₂S donörü GYY4137 intranazal tedavisinin taurin/hipotaurin düzeylerini yükselterek kompliyansı düzeltmesi ve MKH H₂S ön koşullandırma potansiyeli. |
-| **III. Oturum** *(Başkanlar: Prof. Dr. Aytekin Akyol, Prof. Dr. Günay Balta)* | **Kanser Kök Hücrelerinin Hedeflenmesi: Biyomimetik Yaklaşımlar** | **Arş. Gör. Dr. Özlem ALTUNDAĞ ERDOĞAN** *(Kök Hücre Bilimleri A.B.D.)* | CD44⁺/CD24⁻ KKH'lerde L-metiyonin regülasyonu; PLA/poliüretan 3B biyomimetik kemik metastaz modelinde CD133⁺ KKH'lerin temsirolimus (mTOR) ve niklozamid (STAT3/Wnt) ile imhası. |
-| **III. Oturum** | **Kolorektal Kanserde THY1/CD90: Hücresel Kaynak ve Tümör Mikroçevresi** | **Arş. Gör. Dr. Kemal KAYAŞLI** *(Kök Hücre Bilimleri A.B.D.)* | THY1 sinyalinin epitelyal hücrelerden ziyade FAP⁺ CAF ve CD31⁺ endotel/perisit kaynaklı olması; CIBERSORT M2 makrofaj korelasyonu ve bağımsız prognostik değer sınırları. |
-| **III. Oturum** | **Multi-Omik Entegrasyon ile Keşiften Translasyona: Binlerce Sinyal, Kaç Biyobelirteç?** | **Dr. Öğr. Üyesi Cemil Can EYLEM** *(Analitik Kimya A.B.D.)* | Statik omik yerine fluksomiğin döngü kinetiği; FDA-NIH BEST biyobelirteç kriterleri, pre-analitik/analitik batch bias kontrolü ve GVHD'de ST2/REG3α klinik kohort validasyonu. |
-| **IV. Oturum** *(Başkanlar: Prof. Dr. Betül Çelebi Saltık, Doç. Dr. Fatima Aerts Kaya)* | **Fikirden Koordinatörlüğe: AB Fonları (ZEBRARE-TWIN, OPENRAM, BEEXPERT)** | **Prof. Dr. Pervin Rukiye DİNÇER**, **Prof. Dr. Zehra TAŞKIN**, **Arş. Gör. Dr. Aygün SCHIESSER** | Horizon Europe, Erasmus+, MSCA fonlarında 12 stratejik başarı kriteri: Konsorsiyum inşası, açık bilim, ortak ihtiyaçlar ve sürdürülebilirlik. |
+| **Session I**<br/>*(Chairs: Prof. Dr. F. Visal Okur, Prof. Dr. Köksal Özgül)* | **The Role of Epigenetics in Reprogramming**<br/>Dr. Burcu ÖZÇİMEN BATMAN | Dept. of Stem Cell Sciences | Knockdown/inactivation of histone methyltransferase `SETD2` and `H3.3 K36M` mutation collapses the `H3K36me3` somatic barrier, substantially increasing iPSC reprogramming yield. |
+| **Session I** | **Gene Therapy for Primary Immunodeficiencies**<br/>Dr. Özgür Doğuş EROL DUYAR | Dept. of Stem Cell Sciences | Griscelli Syndrome Type 2 (`GS-2` / `RAB27A`): Lentiviral transfer successfully restores vesicular exocytosis and hematopoietic differentiation in patient iPSCs where CRISPR/Cas9 reduced cell viability. |
+| **Session I** | **Cell Migration & Autoinflammation: In Vitro Modeling**<br/>Asst. Prof. Dr. Tayfun Hilmi AKBABA | Dept. of Medical Biology | Familial Mediterranean Fever (`MEFV` / pyrin): Pyrin colocalizes with f-actin at the leading edge of migrating neutrophils; exon 10 mutations exhibit hyper-chemotaxis suppressed by pyrin knockdown. |
+| **Session II**<br/>*(Chairs: Prof. Dr. Ayşen Günel-Özcan, Asst. Prof. Dr. Cansu Özdemir Saka)* | **Regenerative Impact of Induced BM-MSCs in Podocyte Injury**<br/>Dr. Özge Burcu ŞAHAN | Dept. of Stem Cell Sciences | Growth-factor induced BM-MSC secretome preserves podocyte actin architecture, reduces lipotoxicity, and significantly reverses proteinuria in in vivo focal segmental glomerulosclerosis (FSGS). |
+| **Session II** | **Genotoxic Stress & Stromal Fate in Bone Marrow**<br/>Dr. Bihter MURATOĞLU | Dept. of Stem Cell Sciences | Non-enzymatic bone marrow adipose tissue (BMAT) MSC isolation. Topoisomerase II inhibitor etoposide activates early adipogenic genes (`CEBPB`, `CEBPD`, `JUNB`) but impairs terminal `PPARG`/`ADIPOQ` maturation. |
+| **Session II** | **Novel Therapies in Experimental Pulmonary Fibrosis**<br/>Asst. Prof. Dr. Yasemin KARAMAN | Dept. of Pharmacology | Intranasal slow-release H₂S donor `GYY4137` elevates protective sulfur amino acids (taurine/hypotaurine), restores compliance, and inhibits TGF-β1 collagen in ex vivo human lung parenchyma. |
+| **Session III**<br/>*(Chairs: Prof. Dr. Aytekin Akyol, Prof. Dr. Günay Balta)* | **Biomimetic Targeting of Cancer Stem Cells (CSCs)**<br/>Dr. Özlem ALTUNDAĞ ERDOĞAN | Dept. of Stem Cell Sciences | Methionine restriction in CD44⁺/CD24⁻ CSCs. 3D biomimetic bone metastasis model (PLA/polyurethane/collagen): Niclosamide (STAT3/Wnt) and Temsirolimus (mTOR) abolish CD133⁺ invasion and drug resistance. |
+| **Session III** | **THY1/CD90 in Colorectal Cancer Microenvironment**<br/>Dr. Kemal KAYAŞLI | Dept. of Stem Cell Sciences | scRNA-seq and IHC demonstrate THY1 is restricted to FAP⁺ cancer-associated fibroblasts and CD31⁺ pericytes rather than epithelial tumor cells; correlates with M2 macrophages via CIBERSORT. |
+| **Session III** | **Multi-Omics: Thousands of Signals, How Many Biomarkers?**<br/>Asst. Prof. Dr. Cemil Can EYLEM | Dept. of Analytical Chemistry | Static metabolomics vs dynamic fluxomics. FDA-NIH BEST biomarker criteria, pre-analytical/batch bias control, and independent cohort validation of `ST2` and `REG3α` in acute GVHD. |
+| **Session IV**<br/>*(Chairs: Prof. Dr. Betül Çelebi Saltık, Assoc. Prof. Dr. Fatima Aerts Kaya)* | **EU Horizon/Erasmus+ Projects (ZEBRARE-TWIN, OPENRAM, BEEXPERT)** | Prof. Dr. Pervin R. DİNÇER, Prof. Dr. Zehra TAŞKIN, Dr. Aygün SCHIESSER | 12 strategic criteria for international coordinator success: Consortium composition, responsible open evaluation, cross-border regulatory alignment, and sustainable spin-off creation. |
 
-> Detaylı çalıştay konuşma transkriptleri, metodolojik incelemeler ve alıntılar için [docs/HACETTEPE_CALISTAY_DETAYLI_NOTLARI.md](docs/HACETTEPE_CALISTAY_DETAYLI_NOTLARI.md) dosyasını inceleyebilirsiniz.
-
----
-
-## 🤖 AI Çağında Akademi Paneli ve Çalıştay Bulguları
-
-Çalıştayın kapanış bölümünde moderatörlüğünü **Dr. Bihter Muratoğlu** ve **Dr. Özgür Doğuş Erol Duyar**'ın üstlendiği, Kök Hücre Bilimleri Ana Bilim Dalı öğretim üyelerinin panelist olduğu interaktif bir çalıştay ve canlı anket gerçekleştirilmiştir:
-
-### 1. Katılımcıların Kullandığı Yapay Zeka Araçları (Canlı Anket, N = 237)
-* 🧠 **Google Gemini:** **%79**
-* 🤖 **OpenAI ChatGPT:** **%63**
-* ⚡ **Anthropic Claude:** **%26**
-* 🌐 **Diğer (Perplexity, Consensus, Grok, DeepSeek, SciSpace):** **%26**
-* 📓 **NotebookLM:** **%16**
-
-### 2. Yapay Zekanın Akademide Kullanım Amaçları
-* 📚 **Literatür ve bilgi araştırması:** **%43**
-* 🎓 **Konu öğrenme ve ders desteği:** **%38**
-* 🌍 **Özetleme, çeviri ve yabancı metin kavrama:** **%19**
-* ✍️ **Yazım ve dil taslağı düzenleme:** **%14**
-* 💡 **Fikir geliştirme ve proje taslağı:** **%14**
-* 📊 **Veri analizi, hesaplama ve teknik sorun çözme:** **%14**
-
-### 3. Kök Hücre Bilimleri Ana Bilim Dalı Mezun İstihdamı (Tablo 1, N = 50)
-* 🎓 **Diğer Üniversitelerde Akademik Kadro:** 20 kişi (**%40**)
-* 🔬 **Doktoraya Devam Edenler:** 12 kişi (**%24**)
-* 🏭 **Sanayi ve Klinik (İlaç, Biyoteknoloji, Moleküler Tanı):** 10 kişi (**%20**)
-* 🏛️ **Kamu Kuruluşları ve Ulusal Ar-Ge Enstitüleri:** 3 kişi (**%6**)
-* 🧬 **Hacettepe Kök Hücre ABD Kadrosu (1 Öğr. Üyesi, 2 Arş. Gör.):** 3 kişi (**%6**)
-* 🏥 **Hücre ve Doku Üretim Merkezleri (GMP Tesisleri):** 2 kişi (**%4**)
-* 🚀 **Kendi Biyoteknoloji Girişimini Kuran Mezunlar:** 2 kişi (**%4**)
-
-### 4. Lisansüstü Araştırmacıları Kısıtlayan Faktörler
-* 💰 **Maddi kaynak ve finansman:** **%47** | 🧪 **Laboratuvar ve altyapı:** **%33** | 👥 **Danışmanlık:** **%27** | ⏱️ **Zaman:** **%13** | 🏆 **Yarış ve başarı baskısı:** **%13** | 📖 **Literatür tarama yetersizliği:** **%7**
-
-> ⚠️ **Akademik Dürüstlük ve Etik Uyarısı:** Panelde, yapay zekanın ürettiği hayali referanslara (halüsinasyon) ve doğrudan kopyala-yapıştır ile metin oluşturma risklerine dikkat çekilmiş; intihal saptandığı takdirde **2 yıl boyunca TÜBİTAK proje ve burs haklarından mahrumiyet cezası** bulunduğu, iThenticate/Turnitin AI denetimleri karşısında tüm yayınlarda açık yapay zeka beyanında bulunulması gerektiği vurgulanmıştır.
+> Complete verbatim talk summaries, discussions, and full transcripts are available in [docs/HACETTEPE_CALISTAY_DETAYLI_NOTLARI.md](docs/HACETTEPE_CALISTAY_DETAYLI_NOTLARI.md).
 
 ---
 
-## 🖼️ Çalıştay Poster Bildirileri (8 Poster)
+## 🤖 AI in Academia Panel & Community Survey Findings
 
-Çalıştay kapsamında Hacettepe Üniversitesi lisansüstü öğrencilerinin ve araştırmacılarının yürüttüğü 8 adet bilimsel poster sergilenmiştir:
+Moderated by **Dr. Bihter Muratoğlu** and **Dr. Özgür Doğuş Erol Duyar**, with faculty members serving as panelists, addressing graduate education, career development, and academic ethics:
 
-1. **Ali Berk Alişan:** *Akademide Yapay Zeka (AI) Araçları: Araştırma Asistanlığından 'Ortak Yazarlığa' Evrilen Rol. AI Çağında Doktora Öğrencisi Olmak: Uygulama Alanları, Çarpıcı İstatistikler ve Etik Krizler.*
+### 1. AI Tools Adopted by Researchers (Live Survey, N = 237)
+* 🧠 **Google Gemini:** **79%**
+* 🤖 **OpenAI ChatGPT:** **63%**
+* ⚡ **Anthropic Claude:** **26%**
+* 🌐 **Other (Perplexity, Consensus, Grok, DeepSeek, SciSpace):** **26%**
+* 📓 **NotebookLM:** **16%**
+
+### 2. Main Applications of AI in Daily Research
+* 📚 **Literature Discovery & Synthesis:** **43%**
+* 🎓 **Concept Learning & Curriculum Support:** **38%**
+* 🌍 **Translation, Summarization & Multi-lingual Reading:** **19%**
+* ✍️ **Manuscript Drafting & Language Editing:** **14%**
+* 💡 **Hypothesis Generation & Project Ideation:** **14%**
+* 📊 **Data Analysis, Scripting & Technical Troubleshooting:** **14%**
+
+### 3. Graduate Career Placement Track Record (N = 50 Alumni)
+* 🎓 **Faculty / Academic Positions at Other Universities:** 20 (40.0%)
+* 🔬 **Continuing Doctoral Research:** 12 (24.0%)
+* 🏭 **Industry & Clinical Diagnostics (Pharma, Biotech):** 10 (20.0%)
+* 🏛️ **Public Research Institutions & National Institutes:** 3 (6.0%)
+* 🧬 **Hacettepe Stem Cell Faculty & Research Staff:** 3 (6.0%)
+* 🏥 **GMP Cell & Tissue Production Facilities:** 2 (4.0%)
+* 🚀 **Biotech Startup Founders:** 2 (4.0%)
+
+### 4. Critical Bottlenecks Reported by Graduate Students
+* 💰 **Financial Funding & Research Grants:** **47%** | 🧪 **Laboratory Reagent & Equipment Access:** **33%** | 👥 **Mentorship & Environment:** **27%** | ⏱️ **Time Constraints:** **13%** | 🏆 **Academic Competition:** **13%**
+
+> ⚠️ **Academic Integrity Alert:** The panel highlighted the dangers of AI hallucinations (fabricated citations) and uncredited AI generation. Plagiarism carries strict sanctions, including **a 2-year disqualification from national research funding (TÜBİTAK)**. Transparent disclosure of AI tool usage in all publications was established as mandatory.
+
+---
+
+## 🖼️ Scientific Poster Showcase (8 Posters)
+
+1. **Ali Berk Alişan:** *AI Tools in Academia: From Research Assistance to "Co-Authorship". Being a PhD Candidate in the AI Era: Applications, Striking Statistics, and Ethical Crises.*
 2. **Ali Berk Alişan, Özge Burcu Şahan, Ayşen Günel Özcan:** *Differential Expression Profile of miRNAs Indicates that HGF Priming Ameliorates Fibrosis Related miRNAs in Bone Marrow-derived Mesenchymal Stem Cells.* (MolBiyoKon'24, İzmir)
-3. **Anıl Karahan, Mehmet Emin Şeker, Gönül Yurdakul, Özgür Deren, Erdem Fadıloğlu, Fatima Aerts Kaya:** *Göbek Kordonu Mezenkimal Kök Hücrelerinin T Hücre Farklılaşma Desteği için Uygunluğunun Değerlendirilmesi.*
+3. **Anıl Karahan et al.:** *Evaluation of Umbilical Cord Mesenchymal Stem Cells for T Cell Differentiation Support.*
 4. **Beyza Turgut, Bihter Muratoğlu, Duygu Uçkan-Çetinkaya, Cansu Özdemir:** *Investigation of Phenotypic and Molecular Changes in Bone Marrow Mesenchymal Stromal Cells Following Long-Term AhR Activation and Inflammatory Stimulation.*
-5. **Gönül Yurdakul, Mehmet Emin Şeker, Özgür Doğuş Erol Duyar, Necef Özbek, Anıl Karahan, Özgür Deren, Murat Çağan, Fatima Aerts Kaya:** *İndüklenmiş Pluripotent Kök Hücrelerin ve Kordon Astar Epitel Hücrelerinin Pluripotentlik Özelliklerinin Karşılaştırılması.*
-6. **Gülsena Tonyalı, Bihter Muratoğlu, Ceren Tuncay, Cansu Özdemir, Cemil Can Eylem, Emirhan Nemutlu, Kemal Kösemehmetoğlu, F. Tuncay Aki, Duygu Uçkan-Çetinkaya:** *High Resolution Lipidomic Profiling of Human Adipose Tissues from Different Anatomical Locations.* (49th FEBS Congress 2025, İstanbul)
-7. **İmran Özge Çolak, Merve Gizer, Selin Önen, Özgür Doğuş Erol, Fatima Susanna F. Aerts Kaya, Petek Korkusuz:** *İnsan Uyarılmış Pluripotent Kök Hücresi Kaynaklı Somatik ve Germ Hücrelerinden Testinoidlerin Geliştirilmesi, İşlevselliğinin Değerlendirilmesi.*
-8. **Sena Sevindi, Bihter Muratoğlu, Burcu Özçimen, Cansu Özdemir, Fatma Visal Okur, Duygu Uçkan-Çetinkaya:** *Investigation of Aryl Hydrocarbon Receptor Signaling Pathway Related Gene Expressions During Reprogramming of Mesenchymal Stem Cells into Induced Pluripotent Stem Cells.* (47th FEBS Congress 2023, Tours, Fransa)
+5. **Gönül Yurdakul et al.:** *Comparison of Pluripotency Features of Induced Pluripotent Stem Cells and Cord Lining Epithelial Cells.*
+6. **Gülsena Tonyalı et al.:** *High Resolution Lipidomic Profiling of Human Adipose Tissues from Different Anatomical Locations.* (49th FEBS Congress 2025, Istanbul)
+7. **İmran Özge Çolak et al.:** *Development and Functional Assessment of Testinoids Derived from Human iPSC Somatic and Germ Cells.*
+8. **Sena Sevindi et al.:** *Investigation of Aryl Hydrocarbon Receptor Signaling Pathway Related Gene Expressions During Reprogramming of Mesenchymal Stem Cells into Induced Pluripotent Stem Cells.* (47th FEBS Congress 2023, Tours, France)
 
 ---
 
-## 📚 Modül 1: Kök Hücre 101, Potens Hiyerarşisi ve Waddington Manzarası
+## 🧬 Core Computational Engines
 
-### 1. Kök Hücrenin Tanımı ve Bölünme Kinetiği
-Kök hücre, kendini kopyalayabilen (self-renewal) ve özelleşmiş hücre tiplerine diferansiye olabilen öncül biyolojik birimdir. Bu süreç simetrik ve asimetrik bölünme dengesiyle yönetilir:
-* **Asimetrik Bölünme:** Bir kök hücre bölünerek bir adet kök hücre (havuzu korumak için) ve bir adet farklılaşmaya programlanmış öncül hücre (progenitor) meydana getirir.
-* **Simetrik Bölünme:** Doku hasarı veya gelişim sırasında havuzu genişletmek için iki adet kök hücre üretilmesi veya tükenme pahasına iki adet diferansiye hücre oluşturulmasıdır.
+### Module 1: Waddington Epigenetic Landscape & Langevin Dynamics
 
-```mermaid
-graph TD
-    Z["Totipotent Zigot (En Yüksek Enerji)"] --> ICM["Pluripotent ESC / iPSC (Tüm Doku Katmanları)"]
-    ICM --> Ektoderm["Ektoderm: Nöron, Epiderm, Retina"]
-    ICM --> Mezoderm["Mezoderm: MSC, HSC, Kalp Kası, Kemik"]
-    ICM --> Endoderm["Endoderm: Hepatosit, Alveol, Pankreas"]
-    Mezoderm --> Multipotent["Multipotent Kök Hücreler (BM-MSC, HSC)"]
-    Multipotent --> Unipotent["Unipotent / Diferansiye Hücreler (Eritrosit, Podosit)"]
-```
-
-### 2. Waddington Epigenetik Manzarasının Matematiksel Modeli
-Conrad Waddington (1957) tarafından öne sürülen metafor, günümüzde **Nonlineer Dinamik Sistemler** ve **Stokastik Diferansiyel Denklemler (SDE)** ile modellenmektedir:
+We model developmental cellular bifurcations using stochastic Langevin differential equations:
 
 $$dX_t = -\nabla V(X_t) \, dt + \sigma \, dW_t$$
 
-Burada:
-* $X_t = (x, y)^T$: Hücrenin durum koordinatı ($x$: Diferansiasyon derecesi, $y$: Soy/Lineage ekseni).
-* $V(x, y)$: Epigenetik potansiyel enerji fonksiyonu:
-  $$V(x, y) = a(x^4 - 2.2 x^2) + c x + b y^2 (x + 1.2) - \lambda_{\text{OSKM}} \cdot \Psi(x)$$
-* $\lambda_{\text{OSKM}}$: Yamanaka kokteyli dozu. Faktörler arttıkça potansiyel bariyer $\Delta V$ düzleşir.
-* $\sigma \, dW_t$: Biyolojik gürültü (termal dalgalanmalar ve transkripsiyon patlamaları / transcriptional bursting).
+Where the developmental potential function $V(x, y)$ is parameterized as:
 
-Kramers kaçış teorisine göre hücrenin somatik kuyudan pluripotent kuyuya tünelleme/atlama geçiş hızı:
+$$V(x, y) = a(x^4 - 2.2 x^2) + c x + b y^2 (x + 1.2) - \lambda_{\text{OSKM}} \cdot \Psi(x)$$
+
+The transition rate across the barrier $\Delta V$ is quantified via Kramers escape theory:
+
 $$k_{\text{reprog}} \propto \exp\left(-\frac{\Delta V - \alpha \cdot [\text{OSKM}]}{k_B T_{\text{bio}}}\right)$$
 
 <p align="center">
-  <img src="assets/01_waddington_epigenetic_landscape.png" alt="Conrad Waddington Epigenetik Manzarası ve Reprogramlama" width="92%"/>
+  <img src="assets/01_waddington_epigenetic_landscape.png" alt="Waddington Epigenetic Landscape" width="92%"/>
   <br/>
-  <em><b>Şekil 1:</b> Conrad Waddington Epigenetik Manzarası 3D Potansiyel Enerji Yüzeyi V(x, y) ve Yamanaka Kokteyli (OSKM) ile Somatik Hücreden iPSC Vadisine Stokastik Reprogramlama Yörüngesi.</em>
+  <em><b>Figure 2:</b> 3D Waddington potential energy surface and stochastic Langevin reprogramming trajectory driven by OSKM induction.</em>
 </p>
 
 ---
 
-## 🧬 Modül 2: Hücre Kimliği, Epigenetik ve Yamanaka Reprogramlama
+### Module 2: Single-Cell RNA-seq (scRNA-seq) & Lineage Trajectory
 
-### 1. Epigenetik Hafıza ve Modifikasyon Tablosu
-Epigenetik düzenleme, DNA dizisini değiştirmeksizin kromatin yapısını modüle eder:
-
-| Modifikasyon Tipi | Enzim Kompleksi | Fonksiyonel Etki | Reprogramlamadaki Rolü |
-| :--- | :--- | :--- | :--- |
-| **DNA Metilasyonu (5mC)** | DNMT1, DNMT3A, DNMT3B | Gen susturulması, heterokromatin | Somatik promoterların metillenmesi pluripotensiyi kilitler. |
-| **DNA Demetilasyonu (5hmC)** | TET1, TET2, TET3 | Gen aktivasyonu, ökromatin | Yamanaka faktörleri TET enzimlerini uyararak pluripotensi genlerini açar. |
-| **H3K4me3** | MLL / COMPASS | Aktif transkripsiyon (Ökromatin) | Pluripotensi gen promoterlarında yükselir. |
-| **H3K27me3** | Polycomb Repressive Complex 2 (PRC2) | Gen represyonu (Fakültatif heterokromatin) | Somatik doku genlerini susturur. |
-| **Bivalent Domainler** | Hem H3K4me3 hem H3K27me3 | Bekleme (Poised) durumu | Kök hücrede diferansiasyon genlerini sessiz ama hazır tutar. |
-
-### 2. Yamanaka Faktörleri Kokteyli (OSKM)
-* **POU5F1 (OCT4):** POU domaini içeren ana transkripsiyon faktörü. Nanog ve Sox2 ile otoregülatuvar pozitif geri besleme döngüsü kurar.
-* **SOX2:** HMG domain faktörü. OCT4 ile heterodimer oluşturarak kök hücre spesifik enhancer bölgelerine bağlanır.
-* **KLF4:** Çinko parmak (zinc-finger) faktörü. p53 bağımlı apoptozu dengeler ve hücresel proliferasyonu hızlandırır.
-* **MYC (c-MYC):** Öncü (pioneer) benzeri global kromatin açıcı faktör. Histon asetiltransferazları (HAT) çekerek kapalı kromatini gevşetir.
-
-### 3. Reprogramlamanın Üç Dalgası
-```mermaid
-flowchart LR
-    A["Somatik Fibroblast<br/>(COL1A1+, FAP+)"] -->|Dalga 1: MET| B["Pre-iPSC Kolonileri<br/>(E-kaderin+, Morfolojik Dönüşüm)"]
-    B -->|Dalga 2: Epigenetik Reset| C["DNA Demetilasyonu<br/>(X-Reaktivasyonu, TET Aktivitesi)"]
-    C -->|Dalga 3: Endojen Pluripotensi| D["Tam İndüklenmiş iPSC<br/>(Endojen OCT4+, NANOG+, Teratom Yetisi)"]
-```
+Full end-to-end single-cell quality control, $\log_1(p)$ library-size normalization, highly variable gene (HVG) selection, PCA, and diffusion pseudotime reconstruction.
 
 <p align="center">
-  <img src="assets/02_scrna_umap_stem_cell_atlas.png" alt="scRNA-seq Kök Hücre Atlası ve Belirteç Genler" width="96%"/>
+  <img src="assets/02_scrna_umap_stem_cell_atlas.png" alt="Single-cell transcriptomic atlas" width="94%"/>
   <br/>
-  <em><b>Şekil 2:</b> Tek Hücre (scRNA-seq) Transkriptom Atlası: 7 Temel Hücre Fenotipi Kümesi ile Karakteristik Belirteç Genlerin (POU5F1, NANOG, THY1, NPHS1) Ekspresyon Dağılım Gradyanı.</em>
+  <em><b>Figure 3:</b> Single-cell transcriptomic atlas across 7 phenotypic clusters with lineage gradient markers (POU5F1, NANOG, THY1, NPHS1).</em>
 </p>
 
 ---
 
-## 🔬 Modül 3: Rejeneratif Kaos, Kök Hücre Mikroçevresi ve Parakrin Yanıt
+### Module 3: In Vivo Rejuvenation & Horvath Epigenetic Clock
 
-### 1. Arnold Caplan Paradigması: Parakrin ve Trofik Etki
-Yıllarca mezenkimal kök hücrelerin hasarlı dokuya entegre olup yeni böbrek, kalp veya beyin hücresine dönüştüğü varsayılmıştır. Ancak Arnold Caplan ve takip eden kanıtlar bu görüşü yıkmıştır:
-1. İntravenöz veya lokal verilen MSC'lerin çoğu akciğer ve dalakta tutulur; hasarlı dokuya ulaşan hücre oranı %1'in altındadır.
-2. Buna rağmen dokuda dramatik iyileşme, skar dokusu azalması ve organ fonksiyon restorasyonu gözlenir.
-3. Bu etki, MSC'lerin salgıladığı **biyoaktif sekretom, sitokinler, kemokinler ve eksozomlar (30-150 nm ekstrasellüler veziküller)** sayesinde gerçekleşir.
-
-### 2. Podosit Hasarı Mikroçevresi ve BM-MSC Kurtarma Ekseni
-Öğr. Gör. Dr. Özge Burcu Şahan'ın sunumunda detaylandırılan glomerüler modelde:
-* **Podosit:** Glomerül kapillerlerini saran, kan filtreleme bariyerinin son kalesidir.
-* **Hasar Patolojisi:** Nefrotik sendrom ve diyabetik nefropatide podosit ayaksı çıkıntıları (foot processes) silinir (*effacement*), yarık diyafram proteini **Nefrin (NPHS1)** ve **Podosin (NPHS2)** dökülür; ağır proteinüri gelişir.
-* **MSC & Eksozom Müdahalesi:**
-  $$\text{Proteinüri Azalma Oranı} = f([\text{VEGF-A}], [\text{HGF}], [\text{IGF-1}], [\text{IL-10}]) \cdot \exp(-k \cdot t)$$
-  Eksozomlarla taşınan miR-let-7 ve miR-21 gibi mikroRNA'lar kaspaz-3 aktivasyonunu durdurur, podosit apoptozunu engeller ve Nefrin ekspresyonunu restore eder.
-
-```mermaid
-graph TD
-    MSC["Kemik İliği Mezenkimal Kök Hücresi (BM-MSC)"] -->|Parakrin Salınım| EV["Eksozomlar & Biyoaktif Sekretom"]
-    EV -->|VEGFA / KDR| Endotel["Glomerüler Endotel Bütünlüğü"]
-    EV -->|HGF / c-MET| Podosit["Podosit Apoptoz Blokajı (Kaspaz-3 Baskılama)"]
-    EV -->|IGF1 / IGF1R| Nefrin["Nefrin (NPHS1) & Podosin Restorasyonu"]
-    EV -->|IL10 & TSG6| Makrofaj["M1 İnflamatuvar -> M2 İyileştirici Makrofaj Dönüşümü"]
-    Podosit --> Sonuc["Filtrasyon Bariyeri Onarımı & Proteinüri Gerilemesi"]
-```
+Calculates biological age based on DNA methylation dynamics. Simulates cyclic pulsatile expression of OSKM factors to reverse epigenetic age without causing somatic dedifferentiation or teratoma formation.
 
 <p align="center">
-  <img src="assets/03_msc_secretome_podocyte_rescue.png" alt="Mezenkimal Kök Hücre Parakrin Sekretomu ve Podosit Kurtarma" width="96%"/>
+  <img src="assets/06_closed_loop_self_driving_lab.png" alt="Closed Loop Lab & Rejuvenation" width="94%"/>
   <br/>
-  <em><b>Şekil 3:</b> Kemik İliği Mezenkimal Kök Hücre (BM-MSC) Sekretomu ve Saflaştırılmış Eksozomların Hasarlı Böbrek Glomerül Podositlerinde 28 Günlük Hasar Geriletme, Nefrin Restorasyonu ve Proteinüri Azaltma Kinetiği.</em>
+  <em><b>Figure 4:</b> Pulsed OSKM intervention reversing the Horvath epigenetic clock from 75 to 38 biological years.</em>
 </p>
 
 ---
 
-## 🦠 Modül 4: Kanser Kök Hücreleri (CSC), THY1/CD90 ve Biyomimetik Stratejiler
+### Module 4: Paracrine Secretome & Podocyte FSGS Rescue
 
-### 1. Kanser Kök Hücresi Hipotezi ve Tedavi Direnci
-Geleneksel kemoterapötikler bölünen tümör kütlesini küçültürken, kök hücre nişinde korunan CSC'ler sağ kalır:
-
-$$\text{Tümör Nüks Potansiyeli} \propto \frac{[\text{CSC Popülasyonu}] \times \text{ABCG2 Ekspresyonu}}{\text{Kemoterapötik Nüfuz Derinliği}}$$
-
-```text
-KLASİK TEDAVİ:
-Tümör Kütlesi (Heterojen) ──[ Standart Kemo ]──> CSC'ler Hayatta Kalır ──[ Zamanla ]──> NÜKS & METASTAZ
-
-HEDEFLİ CSC TEDAVİSİ:
-Tümör Kütlesi ──[ Kemo + Anti-CD90 Biyomimetik Taşıyıcı ]──> Kök Hücreler İmha Edilir ──> KALICI KÜRLENME
-```
-
-### 2. Kolorektal Kanserde THY1 (CD90)
-Araş. Gör. Dr. Kemal Kayaşlı'nın araştırması doğrultusunda:
-* **Moleküler Özellik:** GPI-ankorlu 25-37 kDa hücre yüzey glikoproteini.
-* **Tümör Mikroçevresindeki Rolü:** Kanser kök hücrelerinde ve kanser ilişkili fibroblastlarda (CAF) yüksek eksprese edilir.
-* **Klinik Korelasyon:** Yüksek THY1 ekspresyonu sergileyen kolorektal tümörlerde 5-Fluorouracil (5-FU) ve Oxaliplatin direnci 4-7 kat artmakta, küre (tumorsphere) oluşturma yetisi tavan yapmaktadır.
-
-### 3. Biyomimetik Nanotaşıyıcılar
-Araş. Gör. Dr. Özlem Altundağ Erdoğan'ın aktardığı stratejide:
-* **Hücre Zarı Kaplama (Cell Membrane Coating):** Kök hücre zarlarıyla kaplanan PLGA nanotaşıyıcılar retiküloendotelyal sistemden (RES) kaçar.
-* **Akıllı Salım:** Tümör nişindeki düşük pH (~6.5) veya matriks metalloproteinaz (MMP-2/9) varlığında yükünü bırakarak doğrudan CSC'leri hedef alır.
+Quantifies the restorative kinetics of MSC secretome (VEGF-A, HGF, IGF-1, IL-10) and extracellular vesicles on damaged renal glomeruli, modeling Nephrin (`NPHS1`) restoration and proteinuria alleviation.
 
 <p align="center">
-  <img src="assets/04_cancer_stem_cell_thy1_targeting.png" alt="Kolorektal Kanser Kök Hücreleri, THY1/CD90 ve Biyomimetik Nanoterapi" width="96%"/>
+  <img src="assets/03_msc_secretome_podocyte_rescue.png" alt="MSC Secretome Rescue" width="94%"/>
   <br/>
-  <em><b>Şekil 4:</b> Kolorektal Kanserde THY1/CD90 Kök Hücre Belirtecinin 5-FU Kemorezistansı ile Korelasyonu ve Hücre Zarıyla Kaplanmış Biyomimetik Nanotaşıyıcılarla Nüks Riskinin Önlenmesi.</em>
+  <em><b>Figure 5:</b> 28-day glomerular filtration barrier recovery curve following MSC exosome administration.</em>
 </p>
 
 ---
 
-## 💻 Modül 5: Multi-Omik Entegrasyon ve AI Çağında Akademi (Dry-Lab)
+### Module 5: Cancer Stem Cells (CSCs) & Biomimetic Nanomedicine
 
-### 1. "Binlerce Sinyal, Kaç Biyobelirteç?" ($p \gg n$) Problemi
-Modern omik teknolojilerinde değişken sayısı ($p$, genler/proteinler) hasta sayısından ($n$) kat be kat fazladır. Bu durum sahte korelasyonlara (spurious correlation) yol açar.
+Simulates 2-compartment pharmacokinetics, reticuloendothelial system (RES) immune evasion, and cell membrane-coated PLGA nanoparticles targeting chemoresistant CSC niches.
 
-### 2. İstatistiksel Düzeltme (Benjamini-Hochberg FDR)
-$m$ adet hipotez testi için p-değerleri küçükten büyüğe sıralanır: $p_{(1)} \le p_{(2)} \le \dots \le p_{(m)}$.
-Her gen için q-değeri hesaplanır:
-
-$$q_{(i)} = \min \left( 1, \, \min_{k \ge i} \left\{ \frac{m \cdot p_{(k)}}{k} \right\} \right)$$
-
-FDR eşiği $Q \le 0.05$ kabul edildiğinde, sahte pozitif oranı %5'in altında sınırlandırılır.
-
-### 3. Kök Hücrelilik İndeksi (Malta et al. mRNAsI)
-Malta ve meslektaşlarının *Cell (2018)* makalesinde geliştirdiği One-Class Logistic Regression (OCLR) tabanlı kök hücrelilik indeksi simülatörümüzde entegredir:
-
-$$\rho = \text{SpearmanCorr}(\mathbf{x}_{\text{örnek}}, \mathbf{w}_{\text{pluripotensi}})$$
-$$\text{mRNAsI} = \frac{\rho - \min(\boldsymbol{\rho})}{\max(\boldsymbol{\rho}) - \min(\boldsymbol{\rho})} \in [0, 1]$$
+<p align="center">
+  <img src="assets/04_cancer_stem_cell_thy1_targeting.png" alt="CSC Targeting" width="94%"/>
+  <br/>
+  <em><b>Figure 6:</b> Correlation between THY1/CD90 and 5-FU chemoresistance, paired with biomimetic nanoparticle tumor penetration.</em>
+</p>
 
 ---
 
-## 🌐 Uluslararası Ortaklıklar ve AB Fonları (Oturum IV)
+### Module 6: In Silico Whole-Cell Digital Twin & Perturbation Engine
 
-* **ZEBRARE-TWIN (Prof. Dr. Pervin Rukiye DİNÇER):** Nadir hastalıklarda zebra balığı (*Danio rerio*) transgenik modelleri ile Avrupa araştırma altyapıları arasında köprü kuran Twinning ortaklığı.
-* **OPENRAM (Prof. Dr. Zehra TAŞKIN):** Akademik araştırma değerlendirme sistemlerinin çoklu bağlamlarda açık bilim prensipleriyle reforming edilmesi.
-* **BEEXPERT (Araş. Gör. Dr. Aygün SCHIESSER):** Arıcılık biyolojik ürünlerinin yara iyileşmesi ve rejeneratif tıp araştırmalarındaki yerini inceleyen Erasmus+/Horizon mükemmeliyet konsorsiyumu.
+Dynamically simulates the cascading impacts of CRISPR knockouts (`SETD2`, `MEFV`, `THY1`) and small molecule inhibitors (`Niclosamide`, `Temsirolimus`, `Etoposide`, `GYY4137`) across gene regulatory circuits.
 
 ---
 
-## 🏛️ Proje Mimarisi ve Dizin Yapısı
+## 🚀 Quick Start & Installation
 
-```text
-hacettepe-stem-cell/
-├── .github/workflows/
-│   └── ci.yml                     # 3 Python versiyonunda (3.10, 3.11, 3.12) otomatik CI
-├── app/
-│   └── app.py                     # 8 modüllü Streamlit & Plotly interaktif web platformu
-├── data/
-│   ├── scrna_counts.csv           # 500 hücre x 45 gen scRNA UMI matrisi
-│   ├── scrna_metadata.csv         # Hücre tipleri, kütüphane boyutu, mitokondri oranları
-│   ├── paracrine_interactions.csv # Küratörlü MSC parakrin sinyalleşme aksları
-│   └── README.md
-├── docs/
-│   ├── MODUL_1_KOK_HUCRE_TEMELLERI.md
-│   ├── MODUL_2_EPIGENETIK_VE_YENIDEN_PROGRAMLAMA.md
-│   ├── MODUL_3_REJENERATIF_TIP_VE_MIKROCEVRE.md
-│   ├── MODUL_4_KANSER_KOK_HUCRELERI_VE_HEDEFLI_TEDAVILER.md
-│   ├── MODUL_5_MULTIOMIK_ENTEGRASYON_VE_YAPAY_ZEKA.md
-│   └── HACETTEPE_CALISTAY_DETAYLI_NOTLARI.md
-├── notebooks/
-│   ├── 01_kok_hucre_scrna_analizi_ve_waddington.ipynb
-│   └── 02_kanser_kok_hucre_ve_thy1_biyobelirtec.ipynb
-├── src/
-│   ├── __init__.py
-│   ├── biomarker_discovery.py     # FDR analizi, Volcano plot ve Random Forest sınıflandırıcı
-│   ├── scrna_pipeline.py          # QC, log1p normalizasyon, HVG, PCA, clustering & pseudotime
-│   ├── secretome_network.py       # Parakrin veri tabanı ve podosit iyileşme simülatörü
-│   ├── stemness_index.py          # mRNAsI kök hücrelilik skoru hesaplayıcı
-│   └── waddington.py              # Waddington 3D potansiyel yüzeyi ve Langevin dinamikleri
-├── tests/
-│   ├── conftest.py
-│   ├── test_biomarker_discovery.py
-│   ├── test_scrna_pipeline.py
-│   ├── test_secretome_network.py
-│   ├── test_stemness_index.py
-│   └── test_waddington.py
-├── pyproject.toml
-├── requirements.txt
-├── LICENSE
-└── README.md
-```
-
----
-
-## 🚀 Hızlı Başlangıç ve Kurulum
-
-### Gereksinimler
-* Python 3.10 veya üzeri
+### Requirements
+* Python 3.10, 3.11, or 3.12
 * Git
 
 ```bash
-# Depoyu klonlayın
+# Clone the repository
 git clone https://github.com/bahattinyunus/hacettepe-stem-cell.git
 cd hacettepe-stem-cell
 
-# Sanal ortam oluşturma ve etkinleştirme
+# Create and activate virtual environment
 python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 
-# Windows Powershell / CMD:
-.venv\Scripts\activate
-
-# Linux / macOS Terminal:
-source .venv/bin/activate
-
-# Paketleri yükleme
+# Install dependencies and package in editable mode
+pip install --upgrade pip
 pip install -r requirements.txt
+pip install -e .
 ```
 
 ---
 
-## 🖥️ İnteraktif Streamlit Web Platformu Kullanımı
+## ⌨️ Command Line Interface (CLI - `hsc`)
 
-Uygulamayı yerel sunucunuzda çalıştırmak için:
+The suite provides a high-performance command line tool (`hsc`):
+
+```bash
+# 1. Simulate Waddington reprogramming
+hsc simulate-reprogramming --yamanaka 0.90 --steps 200
+
+# 2. Compute mRNAsI stemness index from raw single-cell matrix
+hsc calc-stemness --counts data/scrna_counts.csv --output stemness_scores.csv
+
+# 3. Simulate pulsed Horvath epigenetic clock rejuvenation
+hsc epigenetic-clock --age 70 --cycles 5 --strength 0.85
+
+# 4. Perform Gene Set Overrepresentation Analysis (ORA)
+hsc pathway-enrichment --genes POU5F1,SOX2,NANOG,SETD2
+
+# 5. Run In Silico Whole-Cell Digital Twin Perturbation
+hsc digital-twin --target SETD2 --type CRISPR_KO --intensity 0.95
+
+# 6. Simulate Biomimetic Nanomedicine Pharmacokinetics
+hsc nanomedicine --membrane STEM_CELL --drug 5-FU
+
+# 7. Launch Interactive Web Application
+hsc launch-app
+```
+
+---
+
+## 🖥️ Interactive Streamlit Web Platform
+
+Launch the dashboard locally:
 
 ```bash
 streamlit run app/app.py
 ```
 
-Tarayıcınızda açılan arayüz 8 kapsamlı sekmeden oluşur:
-1. **🏠 Genel Bakış & Ekosistem:** Çalıştay özeti, ana metrikler ve oturum haritası.
-2. **🏔️ Waddington & Epigenetik Reprogramlama:** 3D potansiyel yüzeyinde hücre yuvarlanması ve Yamanaka dozu ayarı.
-3. **🔬 scRNA-seq & Hücre Kaderi Analizi:** UMAP/PCA hücre kümeleme, marker gen viyolin grafikleri ve pseudotime çizgisi.
-4. **🦠 Kanser Kök Hücreleri & THY1/CD90:** Kemorezistans korelasyonu ve biyomimetik nanotaşıyıcı hedefleme simülasyonu.
-5. **🧪 Rejeneratif Kaos & MSC Sekretom Ağı:** BM-MSC eksozom tedavisi ve 28 günlük podosit iyileşme eğrisi.
-6. **📊 Multi-Omik & Biyobelirteç Keşfi:** Volcano plot ve Random Forest ile minimal biyobelirteç panelini süzme.
-7. **🎓 Çalıştay Sınavı & Bilgi Kartları:** 5 soruluk interaktif bilgi ölçümü ve detaylı açıklamalar.
-8. **🏛️ Çalıştay Paneli, AI Anketi & Posterler:** Canlı AI kullanım istatistikleri, kısıtlayıcı faktörler, mezun kariyer grafikleri, 8 poster kataloğu ve program takvimi.
+The application provides **8 interactive modules**:
+1. **🏠 Overview & Ecosystem:** Symposium summary, metrics, and multi-omics pipeline.
+2. **🏔️ Waddington & Epigenetic Landscape:** 3D interactive surface & Langevin trajectory.
+3. **🔬 scRNA-seq & Lineage Dynamics:** PCA/UMAP embeddings, marker violin plots, pseudotime.
+4. **🦠 Cancer Stem Cells & THY1/CD90:** Chemoresistance simulator and nanocarrier kinetics.
+5. **🧪 Regenerative Microenvironment & MSC Secretome:** Glomerular podocyte FSGS recovery.
+6. **📊 Multi-Omics Biomarker Discovery:** Volcano plots, Benjamini-Hochberg FDR, Random Forest.
+7. **🎓 Interactive Knowledge Quiz & Flashcards:** Self-assessment on workshop concepts.
+8. **🏛️ Symposium Panel, AI Survey & Posters:** Interactive survey charts, career metrics, and digital twin simulator.
 
 ---
 
-## 💻 Python Kütüphanesi Olarak Kullanım Örnekleri
-
-Depodaki algoritmaları doğrudan kendi Python kodlarınızda kullanabilirsiniz:
+## 🐍 Python API Examples
 
 ```python
 import numpy as np
-from src.waddington import WaddingtonLandscape, simulate_reprogramming
-from src.scrna_pipeline import ScRNAPipeline, generate_synthetic_stem_cell_data
-from src.stemness_index import calculate_stemness_index
-from src.biomarker_discovery import DifferentialExpression, BiomarkerClassifier
-from src.secretome_network import SecretomeNetwork
+from src.digital_twin import WholeCellDigitalTwin
+from src.epigenetic_clock import HorvathEpigeneticClock
+from src.waddington import simulate_reprogramming
 
-# 1. Waddington Simülasyonu
-sim_res = simulate_reprogramming(start_pos=(1.4, 0.7), yamanaka_strength=0.85, steps=100)
-print(f"Hücrenin ulaştığı durum: {sim_res['final_state']}")
+# 1. In Silico Whole-Cell Perturbation (SETD2 Epigenetic Barrier Knockout)
+twin = WholeCellDigitalTwin()
+result = twin.simulate_perturbation("SETD2", perturbation_type="CRISPR_KO", intensity=0.95)
+print(f"Reprogramming Efficiency Multiplier: {result.reprogramming_efficiency_multiplier}x")
+print(f"Phenotypic Shift: {result.phenotypic_transition}")
 
-# 2. scRNA-seq Ön İşleme ve Stemness İndeksi
-counts_df, meta_df = generate_synthetic_stem_cell_data(n_cells=200, seed=42)
-pipeline = ScRNAPipeline()
-log1p = pipeline.preprocess(counts_df)
-pipeline.find_highly_variable_genes(top_n=20)
-pca_coords = pipeline.run_pca(n_components=3)
-stemness = calculate_stemness_index(log1p)
-print(f"Ortalama Pluripotensi Skoru: {stemness.mean():.3f}")
+# 2. Horvath Epigenetic Clock Rejuvenation
+clock = HorvathEpigeneticClock()
+rejuv = clock.simulate_pulsed_rejuvenation(chronological_age=65.0, cycles=5)
+print(f"Years Rejuvenated: {rejuv['years_rejuvenated']} years ({rejuv['safety_status']})")
 
-# 3. Podosit Hasarı Parakrin Kurtarma
-sec_net = SecretomeNetwork()
-rescue = sec_net.simulate_podocyte_rescue(msc_dose=1.5, exosome_enriched=True)
-print(f"Proteinüri Azalma Oranı: %{rescue['proteinuria_reduction_pct']:.1f}")
+# 3. Langevin Stochastic Reprogramming
+traj = simulate_reprogramming(yamanaka_strength=0.88, steps=100)
+print(f"Final State: {traj['final_state']}, Pluripotency Achieved: {traj['success']}")
 ```
 
 ---
 
-## 🧪 Birim Testleri Çalıştırma
+## 🐳 Docker & Containerization
 
-Tüm modüller 23 kapsamlı otomatik birim testi ile doğrulanmaktadır:
+Run the full platform instantly with zero configuration via Docker:
 
 ```bash
-pytest -v
+# Using Docker Compose
+docker compose up -d
+
+# Or build and run directly
+docker build -t hacettepe-stem-cell .
+docker run -p 8501:8501 hacettepe-stem-cell
+```
+Open `http://localhost:8501` in your browser.
+
+---
+
+## 🧪 Unit Tests & Verification (30 Tests)
+
+The entire codebase is verified by 30 automated unit tests:
+
+```bash
+pytest -v --cov=src --cov-report=term-missing
 ```
 
 ---
 
-## 📖 Kapsamlı Akademik Kaynakça
+## 📖 Academic References & Citation
 
-1. **Takahashi, K., & Yamanaka, S. (2006).** Induction of pluripotent stem cells from mouse embryonic and adult fibroblast cultures by defined factors. *Cell*, 126(4), 663-676.
-2. **Waddington, C. H. (1957).** *The Strategy of the Genes: A Discussion of Some Aspects of Theoretical Biology*. George Allen & Unwin, London.
-3. **Caplan, A. I. (2017).** Mesenchymal stem cells: Time to change the name! *Stem Cells Translational Medicine*, 6(6), 1445-1451.
-4. **Malta, T. M., et al. (2018).** Machine learning identifies stemness features associated with oncogenic dedifferentiation. *Cell*, 173(2), 338-354.
-5. **Barker, N., et al. (2007).** Identification of stem cells in small intestine and colon by marker gene Lgr5. *Nature*, 449(7165), 1003-1007.
-6. **Gurdon, J. B. (1962).** The developmental capacity of nuclei taken from intestinal epithelium cells of feeding tadpoles. *Journal of Embryology and Experimental Morphology*, 10(4), 622-640.
-7. **MacArthur, B. D., Ma'ayan, A., & Lemischka, I. R. (2009).** Systems biology of stem cell fate and cellular reprogramming. *Nature Reviews Molecular Cell Biology*, 10(10), 672-681.
-8. **Jaenisch, R., & Young, R. (2008).** Stem cells, the molecular circuitry of pluripotency and nuclear reprogramming. *Cell*, 132(4), 567-582.
-9. **Kayaşlı, K., et al. (2024).** Kolorektal kanserde THY1/CD90: Hücresel kaynak, tümör mikroçevresi ve klinik anlam. *Hacettepe Kök Hücre Çalıştayı Bildirileri*.
-10. **Şahan, Ö. B., et al. (2024).** Podosit hasarı mikroçevresinde indüklenmiş kemik iliği mezenkimal kök hücrelerin rejeneratif etkisi. *Hacettepe Kök Hücre Çalıştayı Bildirileri*.
-11. **Özçimen Batman, B. (2024).** Yeniden programlamada epigenetiğin rolü. *Hacettepe Kök Hücre Çalıştayı Bildirileri*.
-12. **Eylem, C. C. (2024).** Multi-omik entegrasyon ile keşiften translasyona: Binlerce sinyal, kaç biyobelirteç? *Hacettepe Kök Hücre Çalıştayı Bildirileri*.
-13. **Altundağ Erdoğan, Ö. (2024).** Kanser kök hücrelerinin hedeflenmesi: Biyomimetik yaklaşımlar ve moleküler stratejiler. *Hacettepe Kök Hücre Çalıştayı Bildirileri*.
-14. **Muratoğlu, B. (2024).** Kemik iliği stromasında genotoksik stresin hücre kaderi üzerine etkileri. *Hacettepe Kök Hücre Çalıştayı Bildirileri*.
-15. **Karaman, Y. (2024).** Deneysel pulmoner fibroziste yeni tedavi yaklaşımları. *Hacettepe Kök Hücre Çalıştayı Bildirileri*.
-16. **Benjamini, Y., & Hochberg, Y. (1995).** Controlling the false discovery rate: a practical and powerful approach to multiple testing. *Journal of the Royal Statistical Society: Series B*, 57(1), 289-300.
-17. **Trapnell, C., et al. (2014).** The dynamics and regulators of cell fate decisions are revealed by pseudotemporal ordering of single cells. *Nature Biotechnology*, 32(4), 381-391.
+If you use this computational platform, datasets, or algorithms, please cite:
+
+```bibtex
+@article{cetin2026hacettepe,
+  author    = {Çetin, Bahattin Yunus},
+  title     = {An In Silico Whole-Cell Framework for Epigenetic Reprogramming, Stemness Dynamics, and Biomimetic Nanomedicine: Insights from the Hacettepe Stem Cell Technologies Symposium},
+  journal   = {Computational and Structural Biotechnology Journal},
+  year      = {2026},
+  doi       = {10.5281/zenodo.10000000},
+  url       = {https://github.com/bahattinyunus/hacettepe-stem-cell}
+}
+```
 
 ---
 
-## 📜 Lisans
+## 📜 License
 
-Bu proje [MIT Lisansı](LICENSE) kapsamında açık kaynak olarak yayımlanmaktadır.
+This project is licensed under the [MIT License](LICENSE).

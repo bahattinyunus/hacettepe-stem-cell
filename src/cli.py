@@ -19,6 +19,7 @@ from src.biomarker_discovery import DifferentialExpression, BiomarkerClassifier
 from src.epigenetic_clock import HorvathEpigeneticClock
 from src.pathway_enrichment import PathwayEnrichment
 from src.nanomedicine_simulator import BiomimeticNanomedicine
+from src.digital_twin import WholeCellDigitalTwin
 
 
 def main():
@@ -57,7 +58,19 @@ def main():
     pathway_parser = subparsers.add_parser("pathway-enrichment", help="Diferansiyel genler icin biyolojik yolak zenginlesmesi (ORA) yurutur")
     pathway_parser.add_argument("--genes", type=str, required=True, help="Virgulle ayrilmis gen listesi (orn: POU5F1,SOX2,NANOG)")
 
-    # 5. launch-app
+    # 5. digital-twin
+    dt_parser = subparsers.add_parser("digital-twin", help="In silico hucre pertürbasyon simulasyonu (CRISPR KO / ilac)")
+    dt_parser.add_argument("--target", type=str, default="SETD2", help="Hedef gen veya bilesik (orn: SETD2, GYY4137, Niclosamide)")
+    dt_parser.add_argument("--type", type=str, default="CRISPR_KO", choices=["CRISPR_KO", "INHIBITION", "OVEREXPRESSION", "TROPHIC_RESCUE"], help="Perturbasyon tipi")
+    dt_parser.add_argument("--intensity", type=float, default=0.90, help="Perturbasyon gucu [0-1]")
+
+    # 6. nanomedicine
+    nano_parser = subparsers.add_parser("nanomedicine", help="Biyomimetik nanotasici hedefleme ve salim kinetigi simulasyonu")
+    nano_parser.add_argument("--membrane", type=str, default="STEM_CELL", choices=["STEM_CELL", "RBC", "PLATELET", "BARE"], help="Zar kaplama tipi")
+    nano_parser.add_argument("--drug", type=str, default="Doxorubicin", help="Yuklenen kemoterapotik")
+    nano_parser.add_argument("--ph", type=float, default=6.5, help="Tumor mikrocevre pH degeri")
+
+    # 7. launch-app
     subparsers.add_parser("launch-app", help="Interaktif Streamlit web arayuzunu baslatir")
 
     args = parser.parse_args()
@@ -106,6 +119,29 @@ def main():
         else:
             print(f"[+] Zenginlesen {len(df)} Yolak:")
             print(df[["pathway", "overlap_count", "rich_factor", "p_value", "fdr_q_value"]].to_string(index=False))
+
+    elif args.command == "digital-twin":
+        twin = WholeCellDigitalTwin()
+        res = twin.simulate_perturbation(
+            target_gene_or_compound=args.target,
+            perturbation_type=args.type,
+            intensity=args.intensity,
+        )
+        print(f"[*] In Silico Pertürbasyon Hedefi: {res.target} ({res.perturbation_type})")
+        print(f"[+] Fenotipik Geçiş: {res.phenotypic_transition}")
+        print(f"[+] Canlılık Skoru: %{res.viability_percentage}")
+        print(f"[+] Stemness Değişimi: {res.stemness_shift:+.4f}")
+        print(f"[+] Reprogramlama Çarpanı: {res.reprogramming_efficiency_multiplier}x")
+        print(f"[!] Biyobelirteç Uyarısı: {res.biomarker_alert}")
+
+    elif args.command == "nanomedicine":
+        nano = BiomimeticNanomedicine(drug_name=args.drug, membrane_coating=args.membrane)
+        res = nano.simulate_pharmacokinetics()
+        print(f"[*] Biyomimetik Nanotaşıyıcı ({args.membrane} Zarı, Yük: {args.drug})")
+        print(f"[+] Tümör Hedefleme Kat Artışı: {res['tumor_targeting_fold_increase']:.1f}x")
+        print(f"[+] Tümör AUC (Biyomimetik Nano): {res['auc_nano_tumor']:.1f}")
+        print(f"[+] Tümör AUC (Serbest İlaç): {res['auc_free_tumor']:.1f}")
+        print(f"[+] CSC İntraselüler İlaç Birikimi Sağlandı.")
 
     elif args.command == "launch-app":
         import subprocess

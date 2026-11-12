@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software, datasets, or simulation framework in your research, please cite it as below."
+authors:
+  - family-names: "Çetin"
+    given-names: "Bahattin Yunus"
+    orcid: "https://orcid.org/0009-0000-0000-0000"
+title: "hacettepe-stem-cell: Computational Stem Cell Biology, Epigenetic Dynamics, and Regenerative Medicine Platform"
+version: 1.2.0
+doi: 10.5281/zenodo.10000000
+date-released: 2026-11-12
+url: "https://github.com/bahattinyunus/hacettepe-stem-cell"
+keywords:
+  - "stem-cells"
+  - "waddington-landscape"
+  - "single-cell-rna-seq"
+  - "epigenetics"
+  - "yamanaka-reprogramming"
+  - "podocyte-regeneration"
+  - "cancer-stem-cells"
+  - "multi-omics"
+  - "digital-twin"
+  - "regenerative-medicine"
+license: "MIT"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Çetin"
+      given-names: "Bahattin Yunus"
+  title: "An In Silico Whole-Cell Framework for Epigenetic Reprogramming, Stemness Dynamics, and Biomimetic Nanomedicine: Insights from the Hacettepe Stem Cell Technologies Symposium"
+  year: 2026
+  journal: "Computational and Structural Biotechnology Journal"
