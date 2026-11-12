@@ -104,6 +104,7 @@ def main():
             "🧪 Rejeneratif Kaos & MSC Sekretom Ağı",
             "📊 Multi-Omik & Biyobelirteç Keşfi",
             "🎓 Çalıştay Sınavı & Bilgi Kartları",
+            "🏛️ Çalıştay Paneli, AI Anketi & Posterler",
         ],
     )
 
@@ -722,6 +723,249 @@ def main():
                     st.success(f"**Soru {i+1}: Doğru!** {q_item['explain']}")
                 else:
                     st.error(f"**Soru {i+1}: Yanlış.** Doğru cevap: *{q_item['answer']}*. Açıklama: {q_item['explain']}")
+
+
+
+    # ---------------------------------------------------------
+    # 8. ÇALIŞTAY PANELİ, AI ANKETİ & POSTERLER
+    # ---------------------------------------------------------
+    elif menu == "🏛️ Çalıştay Paneli, AI Anketi & Posterler":
+        st.markdown('<div class="main-header">🏛️ II. Yenilikçi Yaklaşımlarla Kök Hücre Teknolojileri Çalıştayı</div>', unsafe_allow_html=True)
+        st.markdown('<div class="sub-header">23 Ekim 2026 | Hacettepe Üniversitesi Beytepe Kampüsü Mehmet Akif Ersoy Salonu</div>', unsafe_allow_html=True)
+
+        m_col1, m_col2, m_col3, m_col4 = st.columns(4)
+        m_col1.metric("Kayıtlı Katılımcı", "237 Kişi", "21 Üniversite")
+        m_col2.metric("Bilimsel Oturum", "4 Oturum", "12 Konuşmacı")
+        m_col3.metric("Poster Sunumu", "8 Bildiri", "Lisansüstü Projeleri")
+        m_col4.metric("Mezun İzleme", "50 Mezun", "%40 Akademik Kadro")
+
+        st.divider()
+
+        tab_ai, tab_posters, tab_program, tab_participants = st.tabs([
+            "🤖 AI Çağında Akademi Paneli & Anketler",
+            "🖼️ Çalıştay Poster Bildirileri (8 Poster)",
+            "⏱️ Çalıştay Programı ve Akış",
+            "🏫 Katılımcı Üniversite ve Kurumlar",
+        ])
+
+        with tab_ai:
+            st.markdown("### 🎙️ AI Çağında Akademi ve Kök Hücre Bilimleri Ana Bilim Dalında Eğitim Paneli")
+            st.markdown(
+                """
+                * **Moderatörler:** Dr. Bihter Muratoğlu, Dr. Özgür Doğuş Erol Duyar
+                * **Panelistler:** Prof. Dr. Betül Çelebi Saltık, Prof. Dr. Ayşen Günel-Özcan, Prof. Dr. Fatma Visal Okur, Doç. Dr. Fatima Aerts Kaya, Dr. Öğr. Üyesi Cansu Özdemir Saka
+                """
+            )
+
+            p_col1, p_col2 = st.columns(2)
+
+            with p_col1:
+                st.markdown("#### 📊 Katılımcıların Tercih Ettiği Yapay Zeka Araçları (Şekil 2)")
+                ai_tools_df = pd.DataFrame([
+                    {"Araç": "Google Gemini", "Kullanım Oranı (%)": 79},
+                    {"Araç": "OpenAI ChatGPT", "Kullanım Oranı (%)": 63},
+                    {"Araç": "Anthropic Claude", "Kullanım Oranı (%)": 26},
+                    {"Araç": "Diğer (Perplexity, Grok, DeepSeek)", "Kullanım Oranı (%)": 26},
+                    {"Araç": "Google NotebookLM", "Kullanım Oranı (%)": 16},
+                ]).sort_values(by="Kullanım Oranı (%)", ascending=True)
+
+                fig_ai_tools = px.bar(
+                    ai_tools_df,
+                    x="Kullanım Oranı (%)",
+                    y="Araç",
+                    orientation="h",
+                    text="Kullanım Oranı (%)",
+                    color="Kullanım Oranı (%)",
+                    color_continuous_scale="Purples",
+                )
+                fig_ai_tools.update_traces(texttemplate="%{text}%", textposition="outside")
+                fig_ai_tools.update_layout(height=320, margin=dict(l=20, r=20, t=20, b=20), xaxis=dict(range=[0, 100]))
+                st.plotly_chart(fig_ai_tools, use_container_width=True)
+
+            with p_col2:
+                st.markdown("#### 🎯 Yapay Zeka Araçlarının Kullanım Amaçları (Şekil 3)")
+                ai_purposes_df = pd.DataFrame([
+                    {"Amaç": "Literatür & Bilgi Araştırması", "Oran (%)": 43},
+                    {"Amaç": "Konu Öğrenme & Ders Desteği", "Oran (%)": 38},
+                    {"Amaç": "Özetleme, Çeviri & İngilizce Metin", "Oran (%)": 19},
+                    {"Amaç": "Yazım & Dil Taslağı Düzenleme", "Oran (%)": 14},
+                    {"Amaç": "Fikir Geliştirme & Proje Taslağı", "Oran (%)": 14},
+                    {"Amaç": "Veri Analizi & Teknik Hesaplama", "Oran (%)": 14},
+                ]).sort_values(by="Oran (%)", ascending=True)
+
+                fig_purposes = px.bar(
+                    ai_purposes_df,
+                    x="Oran (%)",
+                    y="Amaç",
+                    orientation="h",
+                    text="Oran (%)",
+                    color="Oran (%)",
+                    color_continuous_scale="Viridis",
+                )
+                fig_purposes.update_traces(texttemplate="%{text}%", textposition="outside")
+                fig_purposes.update_layout(height=320, margin=dict(l=20, r=20, t=20, b=20), xaxis=dict(range=[0, 60]))
+                st.plotly_chart(fig_purposes, use_container_width=True)
+
+            st.divider()
+
+            c_col1, c_col2 = st.columns(2)
+            with c_col1:
+                st.markdown("#### 🎓 Kök Hücre Bilimleri ABD Mezun Kariyer Dağılımı (Tablo 1, N=50)")
+                dest_df = pd.DataFrame([
+                    {"Alan": "Diğer Üniversitelerde Akademik Kadro", "Kişi": 20, "Oran": 40},
+                    {"Alan": "Doktoraya Devam Edenler", "Kişi": 12, "Oran": 24},
+                    {"Alan": "Sanayi & Klinik (İlaç, Biyoteknoloji)", "Kişi": 10, "Oran": 20},
+                    {"Alan": "Kamu Kuruluşları & Ar-Ge Enstitüleri", "Kişi": 3, "Oran": 6},
+                    {"Alan": "Hacettepe Kök Hücre ABD Kadrosu", "Kişi": 3, "Oran": 6},
+                    {"Alan": "Hücre & Doku Üretim Merkezleri (GMP)", "Kişi": 2, "Oran": 4},
+                ])
+                fig_donut = px.pie(
+                    dest_df,
+                    values="Kişi",
+                    names="Alan",
+                    hole=0.45,
+                    color_discrete_sequence=px.colors.qualitative.Prism,
+                )
+                fig_donut.update_traces(textposition="inside", textinfo="percent+label")
+                fig_donut.update_layout(height=340, margin=dict(l=10, r=10, t=10, b=10), showlegend=False)
+                st.plotly_chart(fig_donut, use_container_width=True)
+                st.caption("Not: Ayrıca mezunlarımızdan 2 kişi (%4) kendi biyoteknoloji girişim şirketini kurmuştur.")
+
+            with c_col2:
+                st.markdown("#### 🚧 Lisansüstü Eğitimde Kısıtlayıcı Faktörler (Şekil 1)")
+                limit_df = pd.DataFrame([
+                    {"Faktör": "Maddi kaynak ve finansman", "Oran (%)": 47},
+                    {"Faktör": "Laboratuvar ve altyapı", "Oran (%)": 33},
+                    {"Faktör": "Danışmanlık ve akademik ortam", "Oran (%)": 27},
+                    {"Faktör": "Zaman kısıtları", "Oran (%)": 13},
+                    {"Faktör": "Rekabet ve başarı baskısı", "Oran (%)": 13},
+                    {"Faktör": "Literatür tarama eksikliği", "Oran (%)": 7},
+                ]).sort_values(by="Oran (%)", ascending=True)
+
+                fig_limit = px.bar(
+                    limit_df,
+                    x="Oran (%)",
+                    y="Faktör",
+                    orientation="h",
+                    text="Oran (%)",
+                    color="Oran (%)",
+                    color_continuous_scale="Reds",
+                )
+                fig_limit.update_traces(texttemplate="%{text}%", textposition="outside")
+                fig_limit.update_layout(height=340, margin=dict(l=20, r=20, t=20, b=20), xaxis=dict(range=[0, 60]))
+                st.plotly_chart(fig_limit, use_container_width=True)
+
+            st.warning(
+                """
+                **⚠️ Akademik Dürüstlük, Halüsinasyon ve Etik Beyan:**
+                * **Yapay Zeka Halüsinasyonu:** Modellerin var olmayan makaleler (örneğin uydurma 1967 referansı) türetme riski nedeniyle tüm veriler birincil kaynaklardan doğrulanmalıdır.
+                * **Doğrudan Metin Kopyalama Riski:** Tezin veya makalenin yapay zekaya doğrudan yazdırılması ve tespiti halinde **2 yıl süreyle TÜBİTAK proje başvurusu ve burs hakkından men cezası** bulunmaktadır.
+                * **Kurumsal Yönergeler:** iThenticate ve Turnitin AI dedektörleri kullanıldığından araştırmacılar çalışmalarında yapay zeka kullanımını şeffafça beyan etmelidir.
+                """
+            )
+
+        with tab_posters:
+            st.markdown("### 🖼️ Çalıştayda Sunulan Bilimsel Posterler (8 Bildiri)")
+
+            posters_list = [
+                {
+                    "no": 1,
+                    "baslik": "Akademide Yapay Zeka (AI) Araçları: Araştırma Asistanlığından 'Ortak Yazarlığa' Evrilen Rol. AI Çağında Doktora Öğrencisi Olmak: Uygulama Alanları, Çarpıcı İstatistikler ve Etik Krizler",
+                    "yazarlar": "Ali Berk Alişan",
+                    "kurum": "Sağlık Bilimleri Enstitüsü, Kök Hücre Bilimleri Ana Bilim Dalı, Hacettepe Üniversitesi, Ankara, Türkiye",
+                    "not": "Çalıştay Özel AI Sunumu"
+                },
+                {
+                    "no": 2,
+                    "baslik": "Differential Expression Profile of miRNAs Indicates that HGF Priming Ameliorates Fibrosis Related miRNAs in Bone Marrow-derived Mesenchymal Stem Cells",
+                    "yazarlar": "Ali Berk Alişan, Özge Burcu Şahan, Ayşen Günel Özcan",
+                    "kurum": "Graduate School of Health Sciences, Department of Stem Cell Sciences, Hacettepe University, Ankara, Türkiye",
+                    "not": "Daha önce 9th International Congress of the Molecular Biology Association of Turkey (MolBiyoKon'24), 12–14 Eylül 2024, İzmir'de sunuldu."
+                },
+                {
+                    "no": 3,
+                    "baslik": "Göbek Kordonu Mezenkimal Kök Hücrelerinin T Hücre Farklılaşma Desteği için Uygunluğunun Değerlendirilmesi",
+                    "yazarlar": "Anıl Karahan, Mehmet Emin Şeker, Gönül Yurdakul, Özgür Deren, Erdem Fadıloğlu, Fatima Aerts Kaya",
+                    "kurum": "Kök Hücre Bilimleri A.B.D., Kök Hücre Merkezi, Tıp Fakültesi Kadın Hastalıkları ve Doğum A.B.D., Hacettepe Üniversitesi",
+                    "not": "Kök Hücre & İmmünoloji Ortak Projesi"
+                },
+                {
+                    "no": 4,
+                    "baslik": "Investigation of Phenotypic and Molecular Changes in Bone Marrow Mesenchymal Stromal Cells Following Long-Term AhR Activation and Inflammatory Stimulation",
+                    "yazarlar": "Beyza Turgut, Bihter Muratoğlu, Duygu Uçkan-Çetinkaya, Cansu Özdemir",
+                    "kurum": "PEDI-STEM, Kök Hücre Bilimleri A.B.D., Çocuk Hematoloji Bilim Dalı, Hacettepe Üniversitesi",
+                    "not": "AhR Sinyali ve İnflamasyon Dinamikleri"
+                },
+                {
+                    "no": 5,
+                    "baslik": "İndüklenmiş Pluripotent Kök Hücrelerin ve Kordon Astar Epitel Hücrelerinin Pluripotentlik Özelliklerinin Karşılaştırılması",
+                    "yazarlar": "Gönül Yurdakul, Mehmet Emin Şeker, Özgür Doğuş Erol Duyar, Necef Özbek, Anıl Karahan, Özgür Deren, Murat Çağan, Fatima Aerts Kaya",
+                    "kurum": "Kök Hücre Bilimleri A.B.D., Kök Hücre Merkezi, İleri Teknolojiler Merkezi, Kadın Hastalıkları ve Doğum A.B.D., Hacettepe Üniversitesi",
+                    "not": "iPSC Karşılaştırmalı Pluripotensi Analizi"
+                },
+                {
+                    "no": 6,
+                    "baslik": "High Resolution Lipidomic Profiling of Human Adipose Tissues from Different Anatomical Locations",
+                    "yazarlar": "Gülsena Tonyalı, Bihter Muratoğlu, Ceren Tuncay, Cansu Özdemir, Cemil Can Eylem, Emirhan Nemutlu, Kemal Kösemehmetoğlu, F. Tuncay Aki, Duygu Uçkan-Çetinkaya",
+                    "kurum": "Kök Hücre Bilimleri, Analitik Kimya, Tıbbi Patoloji, Üroloji, Çocuk Hematoloji, Hacettepe Üniversitesi",
+                    "not": "Daha önce 49th FEBS Congress, 5–9 Temmuz 2025, İstanbul'da sunuldu (FEBS Open Bio, 15 (Suppl. 2): 366)."
+                },
+                {
+                    "no": 7,
+                    "baslik": "İnsan Uyarılmış Pluripotent Kök Hücresi Kaynaklı Somatik ve Germ Hücrelerinden Testinoidlerin Geliştirilmesi, İşlevselliğinin Değerlendirilmesi",
+                    "yazarlar": "İmran Özge Çolak, Merve Gizer, Selin Önen, Özgür Doğuş Erol, Fatima Susanna F. Aerts Kaya, Petek Korkusuz",
+                    "kurum": "Kök Hücre Bilimleri A.B.D., Tıp Fakültesi Histoloji ve Embriyoloji A.B.D., Hacettepe Üniversitesi",
+                    "not": "iPSC Türevi Testinoid 3D Organoid Modeli"
+                },
+                {
+                    "no": 8,
+                    "baslik": "Investigation of Aryl Hydrocarbon Receptor Signaling Pathway Related Gene Expressions During Reprogramming of Mesenchymal Stem Cells into Induced Pluripotent Stem Cells",
+                    "yazarlar": "Sena Sevindi, Bihter Muratoğlu, Burcu Özçimen, Cansu Özdemir, Fatma Visal Okur, Duygu Uçkan-Çetinkaya",
+                    "kurum": "PEDI-STEM, Kök Hücre Bilimleri A.B.D., Çocuk Hematoloji Bilim Dalı, Hacettepe Üniversitesi",
+                    "not": "Daha önce 47th FEBS Congress, 8–12 Temmuz 2023, Tours, Fransa'da sunuldu (FEBS Open Bio, 13: 61–258)."
+                },
+            ]
+
+            search_query = st.text_input("🔍 Posterlerde veya yazarlarda ara (örn: miRNA, AhR, testinoid, lipidomic):", "")
+            for p in posters_list:
+                if (not search_query) or (search_query.lower() in p["baslik"].lower()) or (search_query.lower() in p["yazarlar"].lower()):
+                    with st.expander(f"📌 Poster #{p['no']}: {p['baslik'][:90]}..."):
+                        st.markdown(f"**Tam Başlık:** {p['baslik']}")
+                        st.markdown(f"**Araştırmacılar:** {p['yazarlar']}")
+                        st.markdown(f"**Kurumlar:** {p['kurum']}")
+                        st.info(f"**Bildiri Notu / Kongre:** {p['not']}")
+
+        with tab_program:
+            st.markdown("### ⏱️ 23 Ekim 2026 Çalıştay Programı ve Oturum Akışı")
+            schedule_df = pd.DataFrame([
+                {"Saat": "08.00 - 09.00", "Etkinlik": "KAYIT", "Konuşmacı / Başkan": "Kayıt Masası"},
+                {"Saat": "09.00 - 09.30", "Etkinlik": "Açılış Konuşmaları", "Konuşmacı / Başkan": "Prof. Dr. Müge Yemişçi Özkan & Prof. Dr. Betül Çelebi Saltık"},
+                {"Saat": "09.30 - 09.45", "Etkinlik": "I. Oturum: Yeniden Programlamada Epigenetiğin Rolü", "Konuşmacı / Başkan": "Öğr. Gör. Dr. Burcu Özçimen Batman"},
+                {"Saat": "09.45 - 10.00", "Etkinlik": "I. Oturum: İmmün Yetmezlikler için Gen Tedavi Geliştirilmesi", "Konuşmacı / Başkan": "Dr. Özgür Doğuş Erol Duyar"},
+                {"Saat": "10.00 - 10.15", "Etkinlik": "I. Oturum: Hücre Göçü ve Otoinflamasyon: in vitro Modelleme", "Konuşmacı / Başkan": "Dr. Öğr. Üyesi Tayfun Hilmi Akbaba"},
+                {"Saat": "10.15 - 10.45", "Etkinlik": "KAHVE ARASI", "Konuşmacı / Başkan": "Fuaye Alanı"},
+                {"Saat": "10.45 - 11.00", "Etkinlik": "II. Oturum: Podosit Hasarında BM-MSC Rejeneratif Etkisi", "Konuşmacı / Başkan": "Öğr. Gör. Dr. Özge Burcu Şahan"},
+                {"Saat": "11.00 - 11.15", "Etkinlik": "II. Oturum: Kemik İliği Stromasında Genotoksik Stres", "Konuşmacı / Başkan": "Dr. Bihter Muratoğlu"},
+                {"Saat": "11.15 - 11.30", "Etkinlik": "II. Oturum: Deneysel Pulmoner Fibroziste Yeni Tedavi Yaklaşımları", "Konuşmacı / Başkan": "Dr. Öğr. Üyesi Yasemin Karaman"},
+                {"Saat": "11.30 - 11.45", "Etkinlik": "III. Oturum: Kanser Kök Hücrelerinin Hedeflenmesi", "Konuşmacı / Başkan": "Arş. Gör. Dr. Özlem Altundağ Erdoğan"},
+                {"Saat": "11.45 - 12.00", "Etkinlik": "III. Oturum: Kolorektal Kanserde THY1/CD90 ve Mikroçevre", "Konuşmacı / Başkan": "Arş. Gör. Dr. Kemal Kayaşlı"},
+                {"Saat": "12.00 - 12.15", "Etkinlik": "III. Oturum: Multi-Omik Entegrasyon: Binlerce Sinyal, Kaç Biyobelirteç?", "Konuşmacı / Başkan": "Dr. Öğr. Üyesi Cemil Can Eylem"},
+                {"Saat": "12.15 - 13.30", "Etkinlik": "ÖĞLE YEMEĞİ & POSTER DEĞERLENDİRME", "Konuşmacı / Başkan": "Fuaye & Sergi Alanı"},
+                {"Saat": "13.30 - 14.30", "Etkinlik": "IV. Oturum: AB Fonları (ZEBRARE-TWIN, OPENRAM, BEEXPERT)", "Konuşmacı / Başkan": "Prof. Dr. Pervin R. Dinçer, Prof. Dr. Zehra Taşkın, Arş. Gör. Dr. Aygün Schiesser"},
+                {"Saat": "14.30 - 15.00", "Etkinlik": "KAHVE ARASI", "Konuşmacı / Başkan": "Fuaye Alanı"},
+                {"Saat": "15.00 - 16.00", "Etkinlik": "ÇALIŞTAY: AI Çağında Akademi ve Kök Hücrede Eğitim Paneli", "Konuşmacı / Başkan": "Moderatörler: Dr. B. Muratoğlu, Dr. Ö. D. Erol Duyar & ABD Öğretim Üyeleri"},
+                {"Saat": "16.00 - 16.15", "Etkinlik": "Kapanış Konuşması ve Teşekkür Belgelerinin Takdimi", "Konuşmacı / Başkan": "Düzenleme Kurulu & Enstitü Yönetimi"},
+            ])
+            st.dataframe(schedule_df, use_container_width=True, hide_index=True)
+
+        with tab_participants:
+            st.markdown("### 🏛️ Katılımcı Üniversite ve Kurumlar (21 Üniversite & Kuruluşlar)")
+            p_text = """
+            * **Üniversiteler:** Hacettepe Üniversitesi, Ankara Üniversitesi, Gazi Üniversitesi, ODTÜ, Bilkent Üniversitesi (UNAM), TOBB ETÜ, Lokman Hekim Üniversitesi, Sağlık Bilimleri Üniversitesi (Gülhane Eczacılık), Abdullah Gül Üniversitesi, Ahi Evran Üniversitesi, Bilecik Şeyh Edebali Üniversitesi, Çanakkale Onsekiz Mart Üniversitesi (ÇOMÜ), Erciyes Üniversitesi (GENKÖK), Gebze Teknik Üniversitesi, Hitit Üniversitesi, İzmir Katip Çelebi Üniversitesi, İzmir Tınaztepe Üniversitesi, Karadeniz Teknik Üniversitesi, Kütahya Dumlupınar Üniversitesi, Konya Necmettin Erbakan Üniversitesi, Nevşehir Hacı Bektaş Veli Üniversitesi.
+            * **Yurt Dışı:** Ruhr-Universität Bochum (Moleküler ve Gelişimsel Kök Hücre Biyolojisi Bölümü, Almanya).
+            * **Üniversite Dışı Kurumlar:** TÜSEB Kanser Enstitüsü, T.C. Tarım ve Orman Bakanlığı TAGEM (Uluslararası Hayvancılık Araştırma Merkezi), LÖSEV Bilimsel Ar-Ge Merkezi, Ankara Barosu, Özel Sektör Biyoteknoloji Firmaları.
+            """
+            st.markdown(p_text)
 
 
 if __name__ == "__main__":

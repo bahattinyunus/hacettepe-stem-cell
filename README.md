@@ -7,7 +7,7 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Streamlit App](https://img.shields.io/badge/Streamlit-Interactive%20UI-FF4B4B.svg)](https://streamlit.io)
-[![Tests: Pytest](https://img.shields.io/badge/tests-14%20passed-brightgreen.svg)](https://docs.pytest.org/)
+[![Tests: Pytest](https://img.shields.io/badge/tests-23%20passed-brightgreen.svg)](https://docs.pytest.org/)
 [![Code style: black](https://img.shields.io/badge/code%20style-clean-000000.svg)](https://github.com/psf/black)
 
 > **Hacettepe Üniversitesi Sağlık Bilimleri Enstitüsü Kök Hücre Bilimleri Ana Bilim Dalı Çalıştayı Notları, Genişletilmiş Biyoinformatik Kütüphanesi ve İnteraktif Simülasyon Ekosistemi**
@@ -121,22 +121,72 @@ Aşağıdaki 6 eksen, bu alanın önümüzdeki 10-15 yıl içinde nereye evrilec
 
 ## 🏛️ Hacettepe Kök Hücre Çalıştayı Bildiri Notları
 
-Çalıştay, Hacettepe Üniversitesi Sağlık Bilimleri Enstitüsü Kök Hücre Bilimleri Ana Bilim Dalı ev sahipliğinde, biyotıp, moleküler onkoloji ve biyoinformatik araştırmacılarını bir araya getirmiştir:
+Çalıştay; **Hacettepe Üniversitesi Sağlık Bilimleri Enstitüsü Kök Hücre Bilimleri Ana Bilim Dalı** ev sahipliğinde, 21 farklı üniversiteden, Ruhr-Universität Bochum'dan ve TÜSEB, TAGEM, LÖSEV gibi stratejik kurumlardan **237 kayıtlı katılımcı** ile gerçekleştirilmiştir. Açılışını Enstitü Müdürü **Prof. Dr. Müge Yemişçi Özkan** ile Ana Bilim Dalı Başkanı **Prof. Dr. Betül Çelebi Saltık** yapmıştır:
 
-| Oturum | Konu & Başlık | Konuşmacı & Kurum | Anahtar Bulgu / Çıkarım |
+| Oturum | Konu & Başlık | Konuşmacı & Kurum | Anahtar Bulgu ve Moleküler Mekanizma |
 | :--- | :--- | :--- | :--- |
-| **I. Oturum** | **Yeniden Programlamada Epigenetiğin Rolü** | **Öğr. Gör. Dr. Burcu ÖZÇİMEN BATMAN** | Somatik hücre kısıtlamalarının histon asetilasyonu (HDAC inhibitörleri) ve DNA demetilasyonu ile gevşetilmesi iPSC verimini katlar. |
-| **I. Oturum** | **İmmün Yetmezlikler için Gen Tedavi Geliştirilmesi** | **Dr. Özgür Doğuş EROL DUYAR** | Primer immün yetmezliklerde otolog CD34+ HSC'lerin ex-vivo viral gen düzeltimi ve GMP standartlarında kliniğe geçiş yolları. |
-| **I. Oturum** | **Hücre Göçü ve Otoinflamasyon: in vitro Modelleme** | **Dr. Öğr. Üyesi Tayfun Hilmi AKBABA** | Lökosit transendotelyal göçünün mikroakışkan çip sistemlerinde biyomimetik rekonstrüksiyonu ve otoinflamasyon hedefleri. |
-| **II. Oturum** | **Podosit Hasarında BM-MSC Rejeneratif Etkisi** | **Öğr. Gör. Dr. Özge Burcu ŞAHAN** | Böbrek glomerül filtrasyon hasarında MSC parakrin sekretomu ve eksozomları, Nefrin (NPHS1) proteinini restore ederek proteinüriyi durdurur. |
-| **II. Oturum** | **Kemik İliği Stromasında Genotoksik Stres** | **Dr. Bihter MURATOĞLU** | Kemoterapi/radyasyon kaynaklı stroma yaşlanması (senescence) ve SASP salgısının lösemik mikroçevre dönüşümünü tetiklemesi. |
-| **II. Oturum** | **Deneysel Pulmoner Fibroziste Yeni Tedavi Yaklaşımları** | **Dr. Öğr. Üyesi Yasemin KARAMAN** | Bleomisin kaynaklı akciğer hasarında kök hücre sekretomunun TGF-beta/Smad fibrotik kaskadını bloke etmesi. |
-| **III. Oturum** | **Kanser Kök Hücrelerinin Hedeflenmesi: Biyomimetik Yaklaşımlar** | **Araş. Gör. Dr. Özlem ALTUNDAĞ ERDOĞAN** | Biyomimetik hücre zarıyla kaplı akıllı nanotaşıyıcılar ile kanser kök hücre yuvalarına hedeflenmiş sitotoksisite. |
-| **III. Oturum** | **Kolorektal Kanserde THY1/CD90 ve Tümör Mikroçevresi** | **Araş. Gör. Dr. Kemal KAYAŞLI** | CD90 yüzey glikoproteininin kolorektal CSC'lerde kemorezistans (5-FU direnci), metastaz ve nüks için bağımsız bir biyobelirteç olması. |
-| **III. Oturum** | **Multi-Omik Entegrasyon: Binlerce Sinyal, Kaç Biyobelirteç?** | **Dr. Öğr. Üyesi Cemil Can EYLEM** | Yüksek boyutlu omik veri setlerinden istatistiksel FDR ve Random Forest ile kliniğe aktarılabilir minimal panel izolasyonu. |
-| **IV. Oturum** | **ZEBRARE-TWIN (Uluslararası Twinning Projesi)** | **Prof. Dr. Pervin Rukiye DİNÇER** | Nadir genetik hastalıklarda zebra balığı (*Danio rerio*) modelleri ve Avrupa araştırma altyapıları entegrasyonu. |
-| **IV. Oturum** | **OPENRAM (Açık Araştırma Değerlendirmesi)** | **Prof. Dr. Zehra TAŞKIN** | Bilimsel araştırmaların açık erişim ve çoklu bağlamsal metriklerle adil değerlendirilmesi. |
-| **IV. Oturum** | **BEEXPERT (Mesleki Mükemmeliyet)** | **Araş. Gör. Dr. Aygün SCHIESSER** | Biyoçeşitlilik, arı ürünlerinin rejeneratif tıptaki potansiyeli ve uluslararası eğitim konsorsiyumları. |
+| **I. Oturum** *(Başkanlar: Prof. Dr. Fatma Visal Okur, Prof. Dr. Köksal Özgül)* | **Yeniden Programlamada Epigenetiğin Rolü** | **Öğr. Gör. Dr. Burcu ÖZÇİMEN BATMAN** *(Kök Hücre Bilimleri A.B.D.)* | SETD2 inaktivasyonu, shRNA knockdown ve H3.3 K36M mutasyonuyla H3K36me3 düzeyinin düşürülmesi, somatik epigenetik bariyeri yıkarak iPSC reprogramlama verimini katlar. |
+| **I. Oturum** | **İmmün Yetmezlikler için Gen Tedavi Geliştirilmesi ve Kliniğe Geçiş** | **Dr. Özgür Doğuş EROL DUYAR** *(Kök Hücre Bilimleri A.B.D.)* | Griscelli Sendromu Tip 2 (GS-2 / RAB27A) tedavisinde CRISPR/Cas9 canlılık düşüşü yaratırken; lentiviral gen aktarımı ile fonksiyonel ekzositoz düzelmesi ve iPSC hematopoietik farklılaşması sağlanmıştır. |
+| **I. Oturum** | **Hücre Göçü ve Otoinflamasyon: Hastalık Mekanizmalarının in vitro Modellenmesi** | **Dr. Öğr. Üyesi Tayfun Hilmi AKBABA** *(Tıbbi Biyoloji A.B.D.)* | Ailevi Akdeniz Ateşi'nde (MEFV / pyrin) pyrin'in nötrofil polarizasyonunda f-aktin ile hareket öncüsü kenarda (leading edge) kolokalize olması ve ekzon 10 mutasyonlarında artan kemotaksis. |
+| **II. Oturum** *(Başkanlar: Prof. Dr. Ayşen Günel-Özcan, Dr. Öğr. Üyesi Cansu Özdemir Saka)* | **Podosit Hasarı Mikroçevresinde İndüklenmiş BM-MSC Rejeneratif Etkisi** | **Öğr. Gör. Dr. Özge Burcu ŞAHAN** *(Kök Hücre Bilimleri A.B.D.)* | İndüklenmiş BM-MSC sekretomunun podosit hücre iskeletini güçlendirip lipotoksik yükü azaltması; in vivo FSGS modelinde podosit kaybını durdurup proteinüriyi dramatik baskılaması. |
+| **II. Oturum** | **Kemik İliği Stromasında Genotoksik Stresin Hücre Kaderi Üzerine Etkileri** | **Dr. Bihter MURATOĞLU** *(Kök Hücre Bilimleri A.B.D.)* | Enzimsiz BMAT izolasyonu; AML ve Fanconi anemisinde etoposid genotoksik stresinin erken adipogenez genlerini (CEBPB, CEBPD, JUNB) artırmasına rağmen PPARG/ADIPOQ maturasyonunu durdurması. |
+| **II. Oturum** | **Deneysel Pulmoner Fibroziste Yeni Tedavi Yaklaşımları** | **Dr. Öğr. Üyesi Yasemin KARAMAN** *(Farmakoloji A.B.D.)* | Bleomisin akciğer fibrozisinde yavaş H₂S donörü GYY4137 intranazal tedavisinin taurin/hipotaurin düzeylerini yükselterek kompliyansı düzeltmesi ve MKH H₂S ön koşullandırma potansiyeli. |
+| **III. Oturum** *(Başkanlar: Prof. Dr. Aytekin Akyol, Prof. Dr. Günay Balta)* | **Kanser Kök Hücrelerinin Hedeflenmesi: Biyomimetik Yaklaşımlar** | **Arş. Gör. Dr. Özlem ALTUNDAĞ ERDOĞAN** *(Kök Hücre Bilimleri A.B.D.)* | CD44⁺/CD24⁻ KKH'lerde L-metiyonin regülasyonu; PLA/poliüretan 3B biyomimetik kemik metastaz modelinde CD133⁺ KKH'lerin temsirolimus (mTOR) ve niklozamid (STAT3/Wnt) ile imhası. |
+| **III. Oturum** | **Kolorektal Kanserde THY1/CD90: Hücresel Kaynak ve Tümör Mikroçevresi** | **Arş. Gör. Dr. Kemal KAYAŞLI** *(Kök Hücre Bilimleri A.B.D.)* | THY1 sinyalinin epitelyal hücrelerden ziyade FAP⁺ CAF ve CD31⁺ endotel/perisit kaynaklı olması; CIBERSORT M2 makrofaj korelasyonu ve bağımsız prognostik değer sınırları. |
+| **III. Oturum** | **Multi-Omik Entegrasyon ile Keşiften Translasyona: Binlerce Sinyal, Kaç Biyobelirteç?** | **Dr. Öğr. Üyesi Cemil Can EYLEM** *(Analitik Kimya A.B.D.)* | Statik omik yerine fluksomiğin döngü kinetiği; FDA-NIH BEST biyobelirteç kriterleri, pre-analitik/analitik batch bias kontrolü ve GVHD'de ST2/REG3α klinik kohort validasyonu. |
+| **IV. Oturum** *(Başkanlar: Prof. Dr. Betül Çelebi Saltık, Doç. Dr. Fatima Aerts Kaya)* | **Fikirden Koordinatörlüğe: AB Fonları (ZEBRARE-TWIN, OPENRAM, BEEXPERT)** | **Prof. Dr. Pervin Rukiye DİNÇER**, **Prof. Dr. Zehra TAŞKIN**, **Arş. Gör. Dr. Aygün SCHIESSER** | Horizon Europe, Erasmus+, MSCA fonlarında 12 stratejik başarı kriteri: Konsorsiyum inşası, açık bilim, ortak ihtiyaçlar ve sürdürülebilirlik. |
+
+> Detaylı çalıştay konuşma transkriptleri, metodolojik incelemeler ve alıntılar için [docs/HACETTEPE_CALISTAY_DETAYLI_NOTLARI.md](docs/HACETTEPE_CALISTAY_DETAYLI_NOTLARI.md) dosyasını inceleyebilirsiniz.
+
+---
+
+## 🤖 AI Çağında Akademi Paneli ve Çalıştay Bulguları
+
+Çalıştayın kapanış bölümünde moderatörlüğünü **Dr. Bihter Muratoğlu** ve **Dr. Özgür Doğuş Erol Duyar**'ın üstlendiği, Kök Hücre Bilimleri Ana Bilim Dalı öğretim üyelerinin panelist olduğu interaktif bir çalıştay ve canlı anket gerçekleştirilmiştir:
+
+### 1. Katılımcıların Kullandığı Yapay Zeka Araçları (Canlı Anket, N = 237)
+* 🧠 **Google Gemini:** **%79**
+* 🤖 **OpenAI ChatGPT:** **%63**
+* ⚡ **Anthropic Claude:** **%26**
+* 🌐 **Diğer (Perplexity, Consensus, Grok, DeepSeek, SciSpace):** **%26**
+* 📓 **NotebookLM:** **%16**
+
+### 2. Yapay Zekanın Akademide Kullanım Amaçları
+* 📚 **Literatür ve bilgi araştırması:** **%43**
+* 🎓 **Konu öğrenme ve ders desteği:** **%38**
+* 🌍 **Özetleme, çeviri ve yabancı metin kavrama:** **%19**
+* ✍️ **Yazım ve dil taslağı düzenleme:** **%14**
+* 💡 **Fikir geliştirme ve proje taslağı:** **%14**
+* 📊 **Veri analizi, hesaplama ve teknik sorun çözme:** **%14**
+
+### 3. Kök Hücre Bilimleri Ana Bilim Dalı Mezun İstihdamı (Tablo 1, N = 50)
+* 🎓 **Diğer Üniversitelerde Akademik Kadro:** 20 kişi (**%40**)
+* 🔬 **Doktoraya Devam Edenler:** 12 kişi (**%24**)
+* 🏭 **Sanayi ve Klinik (İlaç, Biyoteknoloji, Moleküler Tanı):** 10 kişi (**%20**)
+* 🏛️ **Kamu Kuruluşları ve Ulusal Ar-Ge Enstitüleri:** 3 kişi (**%6**)
+* 🧬 **Hacettepe Kök Hücre ABD Kadrosu (1 Öğr. Üyesi, 2 Arş. Gör.):** 3 kişi (**%6**)
+* 🏥 **Hücre ve Doku Üretim Merkezleri (GMP Tesisleri):** 2 kişi (**%4**)
+* 🚀 **Kendi Biyoteknoloji Girişimini Kuran Mezunlar:** 2 kişi (**%4**)
+
+### 4. Lisansüstü Araştırmacıları Kısıtlayan Faktörler
+* 💰 **Maddi kaynak ve finansman:** **%47** | 🧪 **Laboratuvar ve altyapı:** **%33** | 👥 **Danışmanlık:** **%27** | ⏱️ **Zaman:** **%13** | 🏆 **Yarış ve başarı baskısı:** **%13** | 📖 **Literatür tarama yetersizliği:** **%7**
+
+> ⚠️ **Akademik Dürüstlük ve Etik Uyarısı:** Panelde, yapay zekanın ürettiği hayali referanslara (halüsinasyon) ve doğrudan kopyala-yapıştır ile metin oluşturma risklerine dikkat çekilmiş; intihal saptandığı takdirde **2 yıl boyunca TÜBİTAK proje ve burs haklarından mahrumiyet cezası** bulunduğu, iThenticate/Turnitin AI denetimleri karşısında tüm yayınlarda açık yapay zeka beyanında bulunulması gerektiği vurgulanmıştır.
+
+---
+
+## 🖼️ Çalıştay Poster Bildirileri (8 Poster)
+
+Çalıştay kapsamında Hacettepe Üniversitesi lisansüstü öğrencilerinin ve araştırmacılarının yürüttüğü 8 adet bilimsel poster sergilenmiştir:
+
+1. **Ali Berk Alişan:** *Akademide Yapay Zeka (AI) Araçları: Araştırma Asistanlığından 'Ortak Yazarlığa' Evrilen Rol. AI Çağında Doktora Öğrencisi Olmak: Uygulama Alanları, Çarpıcı İstatistikler ve Etik Krizler.*
+2. **Ali Berk Alişan, Özge Burcu Şahan, Ayşen Günel Özcan:** *Differential Expression Profile of miRNAs Indicates that HGF Priming Ameliorates Fibrosis Related miRNAs in Bone Marrow-derived Mesenchymal Stem Cells.* (MolBiyoKon'24, İzmir)
+3. **Anıl Karahan, Mehmet Emin Şeker, Gönül Yurdakul, Özgür Deren, Erdem Fadıloğlu, Fatima Aerts Kaya:** *Göbek Kordonu Mezenkimal Kök Hücrelerinin T Hücre Farklılaşma Desteği için Uygunluğunun Değerlendirilmesi.*
+4. **Beyza Turgut, Bihter Muratoğlu, Duygu Uçkan-Çetinkaya, Cansu Özdemir:** *Investigation of Phenotypic and Molecular Changes in Bone Marrow Mesenchymal Stromal Cells Following Long-Term AhR Activation and Inflammatory Stimulation.*
+5. **Gönül Yurdakul, Mehmet Emin Şeker, Özgür Doğuş Erol Duyar, Necef Özbek, Anıl Karahan, Özgür Deren, Murat Çağan, Fatima Aerts Kaya:** *İndüklenmiş Pluripotent Kök Hücrelerin ve Kordon Astar Epitel Hücrelerinin Pluripotentlik Özelliklerinin Karşılaştırılması.*
+6. **Gülsena Tonyalı, Bihter Muratoğlu, Ceren Tuncay, Cansu Özdemir, Cemil Can Eylem, Emirhan Nemutlu, Kemal Kösemehmetoğlu, F. Tuncay Aki, Duygu Uçkan-Çetinkaya:** *High Resolution Lipidomic Profiling of Human Adipose Tissues from Different Anatomical Locations.* (49th FEBS Congress 2025, İstanbul)
+7. **İmran Özge Çolak, Merve Gizer, Selin Önen, Özgür Doğuş Erol, Fatima Susanna F. Aerts Kaya, Petek Korkusuz:** *İnsan Uyarılmış Pluripotent Kök Hücresi Kaynaklı Somatik ve Germ Hücrelerinden Testinoidlerin Geliştirilmesi, İşlevselliğinin Değerlendirilmesi.*
+8. **Sena Sevindi, Bihter Muratoğlu, Burcu Özçimen, Cansu Özdemir, Fatma Visal Okur, Duygu Uçkan-Çetinkaya:** *Investigation of Aryl Hydrocarbon Receptor Signaling Pathway Related Gene Expressions During Reprogramming of Mesenchymal Stem Cells into Induced Pluripotent Stem Cells.* (47th FEBS Congress 2023, Tours, Fransa)
 
 ---
 
@@ -319,7 +369,7 @@ hacettepe-stem-cell/
 ├── .github/workflows/
 │   └── ci.yml                     # 3 Python versiyonunda (3.10, 3.11, 3.12) otomatik CI
 ├── app/
-│   └── app.py                     # 7 modüllü Streamlit & Plotly interaktif web platformu
+│   └── app.py                     # 8 modüllü Streamlit & Plotly interaktif web platformu
 ├── data/
 │   ├── scrna_counts.csv           # 500 hücre x 45 gen scRNA UMI matrisi
 │   ├── scrna_metadata.csv         # Hücre tipleri, kütüphane boyutu, mitokondri oranları
@@ -391,7 +441,7 @@ Uygulamayı yerel sunucunuzda çalıştırmak için:
 streamlit run app/app.py
 ```
 
-Tarayıcınızda açılan arayüz 7 kapsamlı sekmeden oluşur:
+Tarayıcınızda açılan arayüz 8 kapsamlı sekmeden oluşur:
 1. **🏠 Genel Bakış & Ekosistem:** Çalıştay özeti, ana metrikler ve oturum haritası.
 2. **🏔️ Waddington & Epigenetik Reprogramlama:** 3D potansiyel yüzeyinde hücre yuvarlanması ve Yamanaka dozu ayarı.
 3. **🔬 scRNA-seq & Hücre Kaderi Analizi:** UMAP/PCA hücre kümeleme, marker gen viyolin grafikleri ve pseudotime çizgisi.
@@ -399,6 +449,7 @@ Tarayıcınızda açılan arayüz 7 kapsamlı sekmeden oluşur:
 5. **🧪 Rejeneratif Kaos & MSC Sekretom Ağı:** BM-MSC eksozom tedavisi ve 28 günlük podosit iyileşme eğrisi.
 6. **📊 Multi-Omik & Biyobelirteç Keşfi:** Volcano plot ve Random Forest ile minimal biyobelirteç panelini süzme.
 7. **🎓 Çalıştay Sınavı & Bilgi Kartları:** 5 soruluk interaktif bilgi ölçümü ve detaylı açıklamalar.
+8. **🏛️ Çalıştay Paneli, AI Anketi & Posterler:** Canlı AI kullanım istatistikleri, kısıtlayıcı faktörler, mezun kariyer grafikleri, 8 poster kataloğu ve program takvimi.
 
 ---
 
@@ -437,7 +488,7 @@ print(f"Proteinüri Azalma Oranı: %{rescue['proteinuria_reduction_pct']:.1f}")
 
 ## 🧪 Birim Testleri Çalıştırma
 
-Tüm modüller 14 kapsamlı otomatik birim testi ile doğrulanmaktadır:
+Tüm modüller 23 kapsamlı otomatik birim testi ile doğrulanmaktadır:
 
 ```bash
 pytest -v

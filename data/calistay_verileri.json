@@ -1,0 +1,140 @@
+{
+  "workshop_info": {
+    "title": "II. Yenilikçi Yaklaşımlarla Kök Hücre Teknolojileri Çalıştayı",
+    "organizer": "Hacettepe Üniversitesi Sağlık Bilimleri Enstitüsü Kök Hücre Bilimleri Ana Bilim Dalı",
+    "date": "23 Ekim 2026",
+    "location": "Hacettepe Üniversitesi Beytepe Kampüsü Mehmet Akif Ersoy Salonu, Ankara",
+    "opening_speakers": [
+      "Prof. Dr. Müge Yemişçi Özkan (Sağlık Bilimleri Enstitüsü Müdürü)",
+      "Prof. Dr. Betül Çelebi Saltık (Kök Hücre Bilimleri Ana Bilim Dalı Başkanı)"
+    ],
+    "total_participants": 237,
+    "organizing_committee": [
+      "Prof. Dr. Betül ÇELEBİ SALTIK",
+      "Prof. Dr. Ayşen GÜNEL-ÖZCAN",
+      "Doç. Dr. Fatima AERTS KAYA",
+      "Dr. Öğr. Üyesi Cansu ÖZDEMİR SAKA",
+      "Öğr. Gör. Dr. Burcu ÖZÇİMEN BATMAN",
+      "Öğr. Gör. Dr. Özge Burcu ŞAHAN",
+      "Arş. Gör. Dr. Kemal KAYAŞLI",
+      "Arş. Gör. Dr. Özlem ALTUNDAĞ ERDOĞAN",
+      "Dr. Bihter MURATOĞLU",
+      "Dr. Özgür Doğuş EROL DUYAR"
+    ]
+  },
+  "graduate_destinations": [
+    {"field": "Diğer üniversitelerde akademik kadro", "count": 20, "percentage": 40},
+    {"field": "Doktoraya devam", "count": 12, "percentage": 24},
+    {"field": "Sanayi ve klinik (ilaç, biyoteknoloji, klinik tanı)", "count": 10, "percentage": 20},
+    {"field": "Kamu kuruluşları ve Ar-Ge enstitüleri", "count": 3, "percentage": 6},
+    {"field": "Kök Hücre Bilimleri ABD'de akademik kadro (1 öğretim üyesi, 2 arş. gör.)", "count": 3, "percentage": 6},
+    {"field": "Hücre ve doku üretim merkezleri", "count": 2, "percentage": 4}
+  ],
+  "limiting_factors_survey": [
+    {"factor": "Maddi kaynak ve finansman", "percentage": 47},
+    {"factor": "Laboratuvar ve altyapı imkanları", "percentage": 33},
+    {"factor": "Danışmanlık ve akademik ortam", "percentage": 27},
+    {"factor": "Zaman", "percentage": 13},
+    {"factor": "Rekabet ve yüksek başarı beklentisi", "percentage": 13},
+    {"factor": "Literatür tarama araçlarının yetersizliği", "percentage": 7}
+  ],
+  "ai_tools_survey": [
+    {"tool": "Gemini", "percentage": 79},
+    {"tool": "ChatGPT", "percentage": 63},
+    {"tool": "Claude", "percentage": 26},
+    {"tool": "Diğer (Perplexity, Consensus, Grok, DeepSeek, SciSpace)", "percentage": 26},
+    {"tool": "NotebookLM", "percentage": 16}
+  ],
+  "ai_purposes_survey": [
+    {"purpose": "Literatür ve bilgi araştırması", "percentage": 43},
+    {"purpose": "Konu öğrenme ve ders desteği", "percentage": 38},
+    {"purpose": "Özetleme, çeviri ve İngilizce metni anlama", "percentage": 19},
+    {"purpose": "Yazım ve düzenleme", "percentage": 14},
+    {"purpose": "Fikir geliştirme ve proje taslağı", "percentage": 14},
+    {"purpose": "Analiz, hesaplama ve teknik sorun çözme", "percentage": 14}
+  ],
+  "posters": [
+    {
+      "id": 1,
+      "title": "Akademide Yapay Zeka (AI) Araçları: Araştırma Asistanlığından 'Ortak Yazarlığa' Evrilen Rol. AI Çağında Doktora Öğrencisi Olmak: Uygulama Alanları, Çarpıcı İstatistikler ve Etik Krizler",
+      "authors": ["Ali Berk Alişan"],
+      "affiliations": ["Sağlık Bilimleri Enstitüsü, Kök Hücre Bilimleri Ana Bilim Dalı, Hacettepe Üniversitesi, Ankara, Türkiye"],
+      "note": null
+    },
+    {
+      "id": 2,
+      "title": "Differential Expression Profile of miRNAs Indicates that HGF Priming Ameliorates Fibrosis Related miRNAs in Bone Marrow-derived Mesenchymal Stem Cells",
+      "authors": ["Ali Berk Alişan", "Özge Burcu Şahan", "Ayşen Günel Özcan"],
+      "affiliations": ["Graduate School of Health Sciences, Department of Stem Cell Sciences, Hacettepe University, Ankara, Türkiye"],
+      "note": "Daha önce 9th International Congress of the Molecular Biology Association of Turkey (MolBiyoKon'24), 12–14 Eylül 2024, İzmir'de sunuldu."
+    },
+    {
+      "id": 3,
+      "title": "Göbek Kordonu Mezenkimal Kök Hücrelerinin T Hücre Farklılaşma Desteği için Uygunluğunun Değerlendirilmesi",
+      "authors": ["Anıl Karahan", "Mehmet Emin Şeker", "Gönül Yurdakul", "Özgür Deren", "Erdem Fadıloğlu", "Fatima Aerts Kaya"],
+      "affiliations": [
+        "Sağlık Bilimleri Enstitüsü, Kök Hücre Bilimleri Ana Bilim Dalı, Hacettepe Üniversitesi, Ankara, Türkiye",
+        "Kök Hücre Araştırma ve Uygulama Merkezi, Hacettepe Üniversitesi, Ankara, Türkiye",
+        "Tıp Fakültesi, Kadın Hastalıkları ve Doğum Ana Bilim Dalı, Hacettepe Üniversitesi, Ankara, Türkiye"
+      ],
+      "note": null
+    },
+    {
+      "id": 4,
+      "title": "Investigation of Phenotypic and Molecular Changes in Bone Marrow Mesenchymal Stromal Cells Following Long-Term AhR Activation and Inflammatory Stimulation",
+      "authors": ["Beyza Turgut", "Bihter Muratoğlu", "Duygu Uçkan-Çetinkaya", "Cansu Özdemir"],
+      "affiliations": [
+        "Center for Stem Cell Research and Development (PEDI-STEM), Hacettepe University, Ankara, Türkiye",
+        "Graduate School of Health Sciences, Department of Stem Cell Sciences, Hacettepe University, Ankara, Türkiye",
+        "Division of Hematology, Department of Pediatrics, Hacettepe University Faculty of Medicine, Ankara, Türkiye"
+      ],
+      "note": null
+    },
+    {
+      "id": 5,
+      "title": "İndüklenmiş Pluripotent Kök Hücrelerin ve Kordon Astar Epitel Hücrelerinin Pluripotentlik Özelliklerinin Karşılaştırılması",
+      "authors": ["Gönül Yurdakul", "Mehmet Emin Şeker", "Özgür Doğuş Erol Duyar", "Necef Özbek", "Anıl Karahan", "Özgür Deren", "Murat Çağan", "Fatima Aerts Kaya"],
+      "affiliations": [
+        "Sağlık Bilimleri Enstitüsü, Kök Hücre Bilimleri Ana Bilim Dalı, Hacettepe Üniversitesi, Ankara, Türkiye",
+        "Kök Hücre Araştırma ve Uygulama Merkezi, Hacettepe Üniversitesi, Ankara, Türkiye",
+        "İleri Teknolojiler Araştırma ve Uygulama Merkezi, Hacettepe Üniversitesi, Ankara, Türkiye",
+        "Tıp Fakültesi, Kadın Hastalıkları ve Doğum Ana Bilim Dalı, Hacettepe Üniversitesi, Ankara, Türkiye"
+      ],
+      "note": null
+    },
+    {
+      "id": 6,
+      "title": "High Resolution Lipidomic Profiling of Human Adipose Tissues from Different Anatomical Locations",
+      "authors": ["Gülsena Tonyalı", "Bihter Muratoğlu", "Ceren Tuncay", "Cansu Özdemir", "Cemil Can Eylem", "Emirhan Nemutlu", "Kemal Kösemehmetoğlu", "F. Tuncay Aki", "Duygu Uçkan-Çetinkaya"],
+      "affiliations": [
+        "Department of Stem Cell Sciences and Stem Cell Research and Application Center, Hacettepe University, Ankara, Türkiye",
+        "Faculty of Pharmacy, Department of Basic Pharmaceutical Sciences, Department of Analytical Chemistry, Hacettepe University, Ankara, Türkiye",
+        "Faculty of Medicine, Department of Surgical Medical Sciences, Department of Medical Pathology, Hacettepe University, Ankara, Türkiye",
+        "Faculty of Medicine, Department of Surgical Medical Sciences, Department of Urology, Hacettepe University, Ankara, Türkiye",
+        "Division of Hematology, Department of Pediatrics, Hacettepe University Faculty of Medicine, Ankara, Türkiye"
+      ],
+      "note": "Daha önce 49th FEBS Congress, 5–9 Temmuz 2025, İstanbul'da sunuldu (FEBS Open Bio, 15 (Suppl. 2): 366)."
+    },
+    {
+      "id": 7,
+      "title": "İnsan Uyarılmış Pluripotent Kök Hücresi Kaynaklı Somatik ve Germ Hücrelerinden Testinoidlerin Geliştirilmesi, İşlevselliğinin Değerlendirilmesi",
+      "authors": ["İmran Özge Çolak", "Merve Gizer", "Selin Önen", "Özgür Doğuş Erol", "Fatima Susanna F. Aerts Kaya", "Petek Korkusuz"],
+      "affiliations": [
+        "Graduate School of Health Sciences, Department of Stem Cell Sciences, Hacettepe University, Ankara, Türkiye",
+        "Faculty of Medicine, Department of Histology and Embryology, Hacettepe University, Ankara, Türkiye"
+      ],
+      "note": null
+    },
+    {
+      "id": 8,
+      "title": "Investigation of Aryl Hydrocarbon Receptor Signaling Pathway Related Gene Expressions During Reprogramming of Mesenchymal Stem Cells into Induced Pluripotent Stem Cells",
+      "authors": ["Sena Sevindi", "Bihter Muratoğlu", "Burcu Özçimen", "Cansu Özdemir", "Fatma Visal Okur", "Duygu Uçkan-Çetinkaya"],
+      "affiliations": [
+        "Center for Stem Cell Research and Development (PEDI-STEM), Hacettepe University, Ankara, Türkiye",
+        "Graduate School of Health Sciences, Department of Stem Cell Sciences, Hacettepe University, Ankara, Türkiye",
+        "Division of Hematology, Department of Pediatrics, Hacettepe University Faculty of Medicine, Ankara, Türkiye"
+      ],
+      "note": "Daha önce 47th FEBS Congress, 8–12 Temmuz 2023, Tours, Fransa'da sunuldu (FEBS Open Bio, 13: 61–258)."
+    }
+  ]
+}
